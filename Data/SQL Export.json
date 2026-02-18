@@ -1,0 +1,19 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": "SQL",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "New Snippet",
+     "shortcut": "/2do",
+     "type": "text",
+     "text": "",
+     "html": ""
+    }
+   ]
+  }
+ ]
+}

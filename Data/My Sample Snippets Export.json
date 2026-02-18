@@ -1,0 +1,47 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": "My Sample Snippets",
+   "info": "These are some sample snippets to get you started. You can edit these snippets or create new ones.",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Demo - Plain text",
+     "shortcut": "/sig",
+     "type": "text",
+     "text": "Panda Beariston - craig@sfgreencard.com\nDirector of Bamboo Research\nText Blaze Inc.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Panda Beariston - craig@sfgreencard.com</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Director of Bamboo Research</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Text Blaze Inc.</p>"
+    },
+    {
+     "name": "Demo - Styled Text",
+     "shortcut": "/style",
+     "type": "html",
+     "text": "Snippets can contain bold, underline and colors. Here are some other things you can use to style your snippets:\n\t1. lists like this one\n\t2. IMPACTFUL FONTS\n\t3. links like blaze.today\n\t4. and images (Pro version only)",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Snippets can contain <b>bold</b>, <u>underline</u> and <b style=\"color:red;\" data-mce-style=\"color:red;\">c</b><b style=\"color:darkorange;\" data-mce-style=\"color:darkorange;\">o</b><b style=\"color:goldenrod;\" data-mce-style=\"color:goldenrod;\">l</b><b style=\"color:green;\" data-mce-style=\"color:green;\">o</b><b style=\"color:blue;\" data-mce-style=\"color:blue;\">r</b><b style=\"color:violet;\" data-mce-style=\"color:violet;\">s</b>. Here are some other things you can use to style your snippets:</p><ol><li>lists like this one</li><li><span style=\"font-family:Impact, Charcoal, sans-serif;\" data-mce-style=\"font-family:Impact, Charcoal, sans-serif;\">IMPACTFUL</span> <span style=\"font-family:Georgia, serif;\" data-mce-style=\"font-family:Georgia, serif;\">FONTS</span></li><li>links like <a href=\"https://blaze.today\">blaze.today</a></li><li>and images (Pro version only)</li></ol>"
+    },
+    {
+     "name": "Demo - Time and Dates",
+     "shortcut": "/d8",
+     "type": "html",
+     "text": "Text Blaze can insert the current date. Today is {time: MMMM D, YYYY}. You can customize the date formatting. For example, {time: MMM D} or {time: YYYY-MM-DD}.\n\nYou can also insert a date relative to the present. In 2 weeks, it will be {time: MMMM D, YYYY; shift=2W}; and in one month it will be {time: MMMM D, YYYY; shift=1M}.\n\nLearn more about dates and times here: https://blaze.today/commands/time/",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Text Blaze can insert the current date. Today is {time: MMMM D, YYYY}. You can customize the date formatting. For example, {time: MMM D} or {time: YYYY-MM-DD}.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">You can also insert a date relative to the present. In 2 weeks, it will be {time: MMMM D, YYYY; shift=2W}; and in one month it will be {time: MMMM D, YYYY; shift=1M}.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Learn more about dates and times here: <a href=\"https://blaze.today/commands/time/\">https://blaze.today/commands/time/</a></p>"
+    },
+    {
+     "name": "Demo - Cursor",
+     "shortcut": "/cursor",
+     "type": "text",
+     "text": "You can place the mouse cursor anywhere in a snippet after insertion (like here -->{cursor}<--)",
+     "html": "You can place the mouse cursor anywhere in a snippet after insertion (like here --&#x3E;{cursor}&#x3C;--)"
+    },
+    {
+     "name": "Demo - Forms",
+     "shortcut": "/form",
+     "type": "html",
+     "text": "Hi {formtext: name=your name},\n\nText Blaze has forms you can fill out when inserting a snippet. Forms can contain text fields, check boxes and dropdown menus.\n\nLet's try this out:\n\nA customer bought {formtext: name=quantity; default=25} widgets at a price of ${formmenu: name=price; 12.00; default=24.00; 48.00} per widget.\n\nThe total price of the widgets is calculated with a formula: ${=price * quantity}.\n\n{formtext: name=your name}, you can learn more about forms here: https://blaze.today/guides/forms/",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Hi {formtext: name=your name},</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Text Blaze has forms you can fill out when inserting a snippet. Forms can contain text fields, check boxes and dropdown menus.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Let&#x27;s try this out:</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">A customer bought {formtext: name=quantity; default=25} widgets at a price of ${formmenu: name=price; 12.00; default=24.00; 48.00} per widget.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">The total price of the widgets is calculated with a formula: ${=price * quantity}.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{formtext: name=your name}, you can learn more about forms here: <a href=\"https://blaze.today/guides/forms\">https://blaze.today/guides/forms/</a></p>"
+    }
+   ]
+  }
+ ]
+}

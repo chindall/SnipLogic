@@ -1,0 +1,460 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": "Frequently-used abbreviations  ",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "9th Circuit",
+     "shortcut": "/9th",
+     "type": "text",
+     "text": "9th Circuit Court of Appeals",
+     "html": "9th Circuit Court of Appeals"
+    },
+    {
+     "name": "Admin Closed Procs",
+     "shortcut": "/acp",
+     "type": "text",
+     "text": "administratively closed proceedings",
+     "html": "administratively closed proceedings"
+    },
+    {
+     "name": "AUSA",
+     "shortcut": "/ausa",
+     "type": "text",
+     "text": "Attorney for the United States",
+     "html": "Attorney for the United States"
+    },
+    {
+     "name": "Arizona",
+     "shortcut": "/az",
+     "type": "text",
+     "text": "Arizona",
+     "html": "Arizona"
+    },
+    {
+     "name": "Birth certificate",
+     "shortcut": "/bc",
+     "type": "text",
+     "text": "birth certificate",
+     "html": "birth certificate"
+    },
+    {
+     "name": "BIA",
+     "shortcut": "/bia",
+     "type": "text",
+     "text": "Board of Immigration Appeals",
+     "html": "Board of Immigration Appeals"
+    },
+    {
+     "name": "Brazil",
+     "shortcut": "/br",
+     "type": "text",
+     "text": "Brazil",
+     "html": "Brazil"
+    },
+    {
+     "name": "California",
+     "shortcut": "/ca",
+     "type": "text",
+     "text": "California",
+     "html": "California"
+    },
+    {
+     "name": "CBP",
+     "shortcut": "/cbp",
+     "type": "text",
+     "text": "Customs and Border Protection",
+     "html": "Customs and Border Protection"
+    },
+    {
+     "name": "CO",
+     "shortcut": "/co",
+     "type": "text",
+     "text": "Colombia",
+     "html": "Colombia"
+    },
+    {
+     "name": "CPP",
+     "shortcut": "/cpp",
+     "type": "text",
+     "text": "continuous physical presence",
+     "html": "continuous physical presence"
+    },
+    {
+     "name": "DACA",
+     "shortcut": "/daca",
+     "type": "text",
+     "text": "Deferred Action for Childhood Arrivals",
+     "html": "Deferred Action for Childhood Arrivals"
+    },
+    {
+     "name": "Deport Procs",
+     "shortcut": "/dproc",
+     "type": "text",
+     "text": "deportation proceedings",
+     "html": "deportation proceedings"
+    },
+    {
+     "name": "District Attorney's Office",
+     "shortcut": "/dao",
+     "type": "text",
+     "text": "District Attorney's Office ",
+     "html": "District Attorney&#x27;s Office&nbsp;"
+    },
+    {
+     "name": "DHS",
+     "shortcut": "/dhs",
+     "type": "text",
+     "text": "Department of Homeland Security",
+     "html": "Department of Homeland Security"
+    },
+    {
+     "name": "DOJ",
+     "shortcut": "/depo",
+     "type": "text",
+     "text": "Department of Justice",
+     "html": "Department of Justice"
+    },
+    {
+     "name": "DOS",
+     "shortcut": "/ddos",
+     "type": "text",
+     "text": "Department of State",
+     "html": "Department of State"
+    },
+    {
+     "name": "EAD",
+     "shortcut": "/ead",
+     "type": "text",
+     "text": "employment authorization document",
+     "html": "employment authorization document"
+    },
+    {
+     "name": "ECAS",
+     "shortcut": "/ecas",
+     "type": "text",
+     "text": "EOIR Courts & Appeals System",
+     "html": "EOIR Courts &#x26; Appeals System"
+    },
+    {
+     "name": "EOIR",
+     "shortcut": "/eoir",
+     "type": "text",
+     "text": "Executive Office of Immigration Review\t",
+     "html": "Executive Office of Immigration Review&#x9;"
+    },
+    {
+     "name": "ERO",
+     "shortcut": "/ero",
+     "type": "text",
+     "text": "Enforcement and Removal Operations",
+     "html": "Enforcement and Removal Operations"
+    },
+    {
+     "name": "FBI",
+     "shortcut": "/fbi",
+     "type": "text",
+     "text": "Federal Bureau of Investigation",
+     "html": "Federal Bureau of Investigation"
+    },
+    {
+     "name": "FIL",
+     "shortcut": "/fil",
+     "type": "text",
+     "text": "Fuerza Immigration Lawyers, LLP",
+     "html": "Fuerza Immigration Lawyers, LLP"
+    },
+    {
+     "name": "FITR",
+     "shortcut": "/fitr",
+     "type": "text",
+     "text": "Federal Income and Tax Returns",
+     "html": "Federal Income and Tax Returns"
+    },
+    {
+     "name": "Florida",
+     "shortcut": "/fl",
+     "type": "text",
+     "text": "Florida",
+     "html": "Florida"
+    },
+    {
+     "name": "Follow-up",
+     "shortcut": "/fu",
+     "type": "text",
+     "text": "follow-up",
+     "html": "follow-up"
+    },
+    {
+     "name": "FOIA",
+     "shortcut": "/foia",
+     "type": "text",
+     "text": "Freedom of Information Act",
+     "html": "Freedom of Information Act"
+    },
+    {
+     "name": "GCC",
+     "shortcut": "/gcc",
+     "type": "text",
+     "text": "general country conditions",
+     "html": "general country conditions"
+    },
+    {
+     "name": "GTM",
+     "shortcut": "/gtm",
+     "type": "text",
+     "text": "Guatemala",
+     "html": "Guatemala"
+    },
+    {
+     "name": "HND",
+     "shortcut": "/hnd",
+     "type": "text",
+     "text": "Honduras",
+     "html": "Honduras"
+    },
+    {
+     "name": "Humanitarian visa",
+     "shortcut": "/hvisa",
+     "type": "text",
+     "text": "humanitarian visa",
+     "html": "humanitarian visa"
+    },
+    {
+     "name": "Im Court",
+     "shortcut": "/imc",
+     "type": "text",
+     "text": "Immigration Court",
+     "html": "Immigration Court"
+    },
+    {
+     "name": "ICE",
+     "shortcut": "/ice",
+     "type": "text",
+     "text": "Immigration and Customs Enforcement",
+     "html": "Immigration and Customs Enforcement"
+    },
+    {
+     "name": "IEP",
+     "shortcut": "/iep",
+     "type": "text",
+     "text": "Individualized Education Program",
+     "html": "Individualized Education Program"
+    },
+    {
+     "name": "IFSP",
+     "shortcut": "/ifsp",
+     "type": "text",
+     "text": "Individualized Family Service Plan",
+     "html": "Individualized Family Service Plan"
+    },
+    {
+     "name": "IPP",
+     "shortcut": "/ipp",
+     "type": "text",
+     "text": "Individualized Program Plan",
+     "html": "Individualized Program Plan"
+    },
+    {
+     "name": "LEC",
+     "shortcut": "/lec",
+     "type": "text",
+     "text": "law enforcement certification",
+     "html": "law enforcement certification"
+    },
+    {
+     "name": "MX",
+     "shortcut": "/mx",
+     "type": "text",
+     "text": "Mexico",
+     "html": "Mexico"
+    },
+    {
+     "name": "New Mexico",
+     "shortcut": "/nmx",
+     "type": "text",
+     "text": "New Mexico",
+     "html": "New Mexico"
+    },
+    {
+     "name": "NOA",
+     "shortcut": "/noa",
+     "type": "text",
+     "text": "Notice of Appeal",
+     "html": "Notice of Appeal"
+    },
+    {
+     "name": "NOH",
+     "shortcut": "/noh",
+     "type": "text",
+     "text": "Notice of Hearing",
+     "html": "Notice of Hearing"
+    },
+    {
+     "name": "NTA",
+     "shortcut": "/nta",
+     "type": "text",
+     "text": "Notice to Appear",
+     "html": "Notice to Appear"
+    },
+    {
+     "name": "NVC",
+     "shortcut": "/nvc",
+     "type": "text",
+     "text": "National Visa Center",
+     "html": "National Visa Center"
+    },
+    {
+     "name": "OBIM",
+     "shortcut": "/obim",
+     "type": "text",
+     "text": "Office of Biometric Identity Management",
+     "html": "Office of Biometric Identity Management"
+    },
+    {
+     "name": "OPD",
+     "shortcut": "/opd",
+     "type": "text",
+     "text": "Oakland Police Department",
+     "html": "Oakland Police Department"
+    },
+    {
+     "name": "PH",
+     "shortcut": "/ph",
+     "type": "html",
+     "text": "Philippines",
+     "html": "<span style=\"color:#212529;background-color:#ffffff;\" data-mce-style=\"color:#212529;background-color:#ffffff;\">Philippines</span>"
+    },
+    {
+     "name": "POE",
+     "shortcut": "/poe",
+     "type": "text",
+     "text": "port-of-entry",
+     "html": "port-of-entry"
+    },
+    {
+     "name": "PR",
+     "shortcut": "/pur",
+     "type": "text",
+     "text": "Puerto Rico",
+     "html": "Puerto Rico"
+    },
+    {
+     "name": "Removal Procs",
+     "shortcut": "/rp",
+     "type": "text",
+     "text": "removal proceedings",
+     "html": "removal proceedings"
+    },
+    {
+     "name": "SFPD",
+     "shortcut": "/sfpd",
+     "type": "text",
+     "text": "San Francisco Police Department\t",
+     "html": "San Francisco Police Department&#x9;"
+    },
+    {
+     "name": "SIJS",
+     "shortcut": "/sijv",
+     "type": "text",
+     "text": "Special Immigrant Juvenile Status",
+     "html": "Special Immigrant Juvenile Status"
+    },
+    {
+     "name": "SVL",
+     "shortcut": "/slv",
+     "type": "text",
+     "text": "El Salvador",
+     "html": "El Salvador"
+    },
+    {
+     "name": "SSC",
+     "shortcut": "/ssc",
+     "type": "text",
+     "text": "social security card",
+     "html": "social security card"
+    },
+    {
+     "name": "SSO",
+     "shortcut": "/sso",
+     "type": "text",
+     "text": "Social Security Office",
+     "html": "Social Security Office"
+    },
+    {
+     "name": "SYS",
+     "shortcut": "/sys",
+     "type": "text",
+     "text": "San, Ysidro",
+     "html": "San, Ysidro"
+    },
+    {
+     "name": "TA",
+     "shortcut": "/ta",
+     "type": "text",
+     "text": "Trial Attorney",
+     "html": "Trial Attorney"
+    },
+    {
+     "name": "TELA",
+     "shortcut": "/tela",
+     "type": "text",
+     "text": "telephone appointment",
+     "html": "telephone appointment"
+    },
+    {
+     "name": "To-do",
+     "shortcut": "/td",
+     "type": "text",
+     "text": "to-do\t",
+     "html": "to-do&#x9;"
+    },
+    {
+     "name": "TH",
+     "shortcut": "/th",
+     "type": "text",
+     "text": "Thailand",
+     "html": "Thailand"
+    },
+    {
+     "name": "TPS",
+     "shortcut": "/tps",
+     "type": "text",
+     "text": "Temporary Protected Status",
+     "html": "Temporary Protected Status"
+    },
+    {
+     "name": "T Visa",
+     "shortcut": "/tvisa",
+     "type": "text",
+     "text": "T nonimmigrant visa status (victims of human trafficking) ",
+     "html": "T nonimmigrant visa status (victims of human trafficking)&nbsp;"
+    },
+    {
+     "name": "Texas",
+     "shortcut": "/tx",
+     "type": "text",
+     "text": "Texas",
+     "html": "Texas"
+    },
+    {
+     "name": "USCIS",
+     "shortcut": "/uscis",
+     "type": "text",
+     "text": "United States Citizenship and Immigration Services",
+     "html": "United States Citizenship and Immigration Services"
+    },
+    {
+     "name": "U Visa",
+     "shortcut": "/uvisa",
+     "type": "text",
+     "text": "U nonimmigrant visa status",
+     "html": "U nonimmigrant visa status"
+    }
+   ]
+  }
+ ]
+}

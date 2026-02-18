@@ -1,0 +1,159 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": ">CLIO / USCIS",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "USCIS Filing",
+     "shortcut": "/uscis_filing",
+     "type": "text",
+     "text": "I prepared and filed the application (e.g., I-589, I-131, I-765) for the client.\n{key:tab}\nPrepared and filed the application (e.g., I-589, I-131, I-765) for the client.\nNotified attorney\n",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared and filed the application (e.g., I-589, I-131, I-765) for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared and filed the application (e.g., I-589, I-131, I-765) for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Notified attorney</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p>"
+    },
+    {
+     "name": "RFE Review",
+     "shortcut": "/rfereview",
+     "type": "text",
+     "text": "I reviewed and responded to USCIS RFE for the application; drafted cover letter and collected evidence.\n{key:tab}\nReviewed and responded to USCIS RFE for the application; drafted cover letter and collected evidence.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed and responded to USCIS RFE for the application; drafted cover letter and collected evidence.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Reviewed and responded to USCIS RFE for the application; drafted cover letter and collected evidence.</p>"
+    },
+    {
+     "name": "USCIS Interview Prep",
+     "shortcut": "/uscis_interview",
+     "type": "text",
+     "text": "I prepped the client for USCIS interview (e.g., asylum, adjustment); covered procedure and Q&A.\n{key:tab}\nPrepped the client for USCIS interview (e.g., asylum, adjustment); covered procedure and Q&A.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepped the client for USCIS interview (e.g., asylum, adjustment); covered procedure and Q&#x26;A.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepped the client for USCIS interview (e.g., asylum, adjustment); covered procedure and Q&#x26;A.</p>"
+    },
+    {
+     "name": "Asylum Application Drafted",
+     "shortcut": "/i589_drafted",
+     "type": "text",
+     "text": "I drafted an asylum application (Form I‑589).\n{key:tab}\nI prepared forms, a declaration, and supporting evidence for filing.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted an asylum application (Form I&#x2011;589).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared forms, a declaration, and supporting evidence for filing.</p>"
+    },
+    {
+     "name": "Asylum Application Filed",
+     "shortcut": "/i589_filed",
+     "type": "text",
+     "text": "I filed an asylum application (Form I‑589).\n{key:tab}\nI confirmed receipt requirements and documented delivery details.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an asylum application (Form I&#x2011;589).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed receipt requirements and documented delivery details.</p>"
+    },
+    {
+     "name": "Employment Authorization Application Prepared",
+     "shortcut": "/ead_prep",
+     "type": "text",
+     "text": "I prepared an employment authorization application (Form I‑765).\n{key:tab}\nI completed the form, gathered evidence, and prepared the filing for submission.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared an employment authorization application (Form I&#x2011;765).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I completed the form, gathered evidence, and prepared the filing for submission.</p>"
+    },
+    {
+     "name": "Employment Authorization Application Filed",
+     "shortcut": "/ead_filed",
+     "type": "text",
+     "text": "I filed an employment authorization application (Form I‑765).\n{key:tab}\nI confirmed filing method and saved the receipt information.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an employment authorization application (Form I&#x2011;765).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed filing method and saved the receipt information.</p>"
+    },
+    {
+     "name": "Advance Parole Application Filed",
+     "shortcut": "/ap_filed",
+     "type": "text",
+     "text": "I filed an advance parole application (Form I‑131).\n{key:tab}\nI prepared the packet and noted travel‑related advisories.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an advance parole application (Form I&#x2011;131).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared the packet and noted travel&#x2011;related advisories.</p>"
+    },
+    {
+     "name": "Adjustment of Status Packet Prepared",
+     "shortcut": "/aos_prep",
+     "type": "text",
+     "text": "I prepared an adjustment of status packet (Form I‑485 and related forms).\n{key:tab}\nI assembled forms, civil documents, medical exams, and supporting evidence.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared an adjustment of status packet (Form I&#x2011;485 and related forms).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I assembled forms, civil documents, medical exams, and supporting evidence.</p>"
+    },
+    {
+     "name": "Adjustment of Status Packet Filed",
+     "shortcut": "/aos_filed",
+     "type": "text",
+     "text": "I filed an adjustment of status packet.\n{key:tab}\nI documented delivery details and saved copies to the case file.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an adjustment of status packet.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I documented delivery details and saved copies to the case file.</p>"
+    },
+    {
+     "name": "Request for Evidence Reviewed",
+     "shortcut": "/rfe_review",
+     "type": "text",
+     "text": "I reviewed a Request for Evidence from USCIS.\n{key:tab}\nI analyzed requested items, drafted a response plan, and assigned tasks.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed a Request for Evidence from USCIS.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I analyzed requested items, drafted a response plan, and assigned tasks.</p>"
+    },
+    {
+     "name": "RFE Response Filed",
+     "shortcut": "/rfe_response_filed",
+     "type": "text",
+     "text": "I filed a response to a Request for Evidence.\n{key:tab}\nI organized exhibits, drafted the cover letter, and confirmed submission.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a response to a Request for Evidence.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized exhibits, drafted the cover letter, and confirmed submission.</p>"
+    },
+    {
+     "name": "USCIS Interview Preparation",
+     "shortcut": "/uscis_interview_prep",
+     "type": "text",
+     "text": "I prepared for a USCIS interview.\n{key:tab}\nI reviewed the record, rehearsed likely questions, and confirmed appointment logistics.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for a USCIS interview.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed the record, rehearsed likely questions, and confirmed appointment logistics.</p>"
+    },
+    {
+     "name": "USCIS Interview Appearance",
+     "shortcut": "/uscis_interview_attend",
+     "type": "text",
+     "text": "I attended a USCIS interview.\n{key:tab}\nI appeared with the applicant, clarified issues as needed, and documented outcomes and next steps.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I attended a USCIS interview.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I appeared with the applicant, clarified issues as needed, and documented outcomes and next steps.</p>"
+    },
+    {
+     "name": "Administrative Appeal Filed",
+     "shortcut": "/aao_appeal",
+     "type": "text",
+     "text": "I filed an administrative appeal with the Administrative Appeals Office.\n{key:tab}\nI identified issues for appeal, prepared the brief outline, and documented deadlines.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an administrative appeal with the Administrative Appeals Office.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I identified issues for appeal, prepared the brief outline, and documented deadlines.</p>"
+    },
+    {
+     "name": "InfoPass Appointment Notes",
+     "shortcut": "/infopass_notes",
+     "type": "text",
+     "text": "I attended an InfoPass appointment.\n{key:tab}\nI met with a USCIS officer, requested case updates, and recorded guidance provided.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I attended an InfoPass appointment.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I met with a USCIS officer, requested case updates, and recorded guidance provided.</p>"
+    },
+    {
+     "name": "National Visa Center Packet Prepared",
+     "shortcut": "/nvc_packet_prep",
+     "type": "text",
+     "text": "I prepared a National Visa Center packet.\n{key:tab}\nI organized civil documents, financial forms, and supporting evidence for consular processing.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared a National Visa Center packet.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized civil documents, financial forms, and supporting evidence for consular processing.</p>"
+    },
+    {
+     "name": "Consular Interview Preparation",
+     "shortcut": "/consular_prep",
+     "type": "text",
+     "text": "I prepared for a consular interview.\n{key:tab}\nI reviewed the case record, practiced likely questions, and confirmed document readiness.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for a consular interview.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed the case record, practiced likely questions, and confirmed document readiness.</p>"
+    },
+    {
+     "name": "EAD Receipt Notice (Auto Extension)",
+     "shortcut": "/ead_receipt_notice",
+     "type": "text",
+     "text": "I received the Employment Authorization Document (EAD) receipt notice; an automatic extension applies.\n{key:tab}\nI reviewed the EAD receipt notice and confirmed that the automatic extension applies.\nNext steps:\n- Calendar a reminder to file for renewal six months before expiration.\n- Create a task to pre-review the renewal packet and gather updated evidence.\n- Send the client a packet (by mail and through the client portal) explaining the receipt and automatic extension.\n- Scan the notice and upload it to the client portal.\n- Request copies of both sides of the current EAD card for the file.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I received the Employment Authorization Document (EAD) receipt notice; an automatic extension applies.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed the EAD receipt notice and confirmed that the automatic extension applies.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Next steps:</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">- Calendar a reminder to file for renewal six months before expiration.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">- Create a task to pre-review the renewal packet and gather updated evidence.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">- Send the client a packet (by mail and through the client portal) explaining the receipt and automatic extension.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">- Scan the notice and upload it to the client portal.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">- Request copies of both sides of the current EAD card for the file.</p>"
+    },
+    {
+     "name": "Asylum Annual Fee Paid (USCIS) OBO client",
+     "shortcut": "/589affuscisobo",
+     "type": "text",
+     "text": "I paid $100 Asylum Annual Fee (AFF) on behalf of client using office card. Noted expense on client's billing record. Date of AFF invoice was: \nUpdated matter record to reflect that payment made for this year and due date for next fee.\n\n",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I paid $100 Asylum Annual Fee (AFF) on behalf of client using office card. Noted expense on client&#x27;s billing record. Date of AFF invoice was:&nbsp;</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Updated matter record to reflect that payment made for this year and due date for next fee.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p>"
+    },
+    {
+     "name": "Asylum Annual Fee Paid (USCIS) Paid by Client",
+     "shortcut": "/589affusciscl",
+     "type": "text",
+     "text": "Received receipt for $100 Asylum Annual Fee (AFF) paid by client. Date of AFF invoice was: \nUpdated matter record to reflect that payment made for this year and due date for next fee.\n\n\n\n",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Received receipt for $100 Asylum Annual Fee (AFF) paid by client. Date of AFF invoice was:&nbsp;</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Updated matter record to reflect that payment made for this year and due date for next fee.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p>"
+    }
+   ]
+  }
+ ]
+}

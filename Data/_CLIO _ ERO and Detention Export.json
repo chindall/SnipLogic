@@ -1,0 +1,229 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": ">CLIO / ERO and Detention",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Bond Prep",
+     "shortcut": "/bond_prep",
+     "type": "text",
+     "text": "I prepared bond hearing packet (support letters, evidence, legal brief) for the client.\n{key:tab}\nPrepared bond hearing packet (support letters, evidence, legal brief) for the client.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared bond hearing packet (support letters, evidence, legal brief) for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared bond hearing packet (support letters, evidence, legal brief) for the client.</p>"
+    },
+    {
+     "name": "Document Request",
+     "shortcut": "/doc_request",
+     "type": "text",
+     "text": "I requested supporting documents from the client (e.g., IDs, police reports, proof of residence).\n{key:tab}\nRequested supporting documents from the client (e.g., IDs, police reports, proof of residence).",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I requested supporting documents from the client (e.g., IDs, police reports, proof of residence).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Requested supporting documents from the client (e.g., IDs, police reports, proof of residence).</p>"
+    },
+    {
+     "name": "Stay of Removal Prep",
+     "shortcut": "/stay_prep",
+     "type": "text",
+     "text": "I prepared and filed stay of removal request (I-246) for the client.\n{key:tab}\nPrepared and filed stay of removal request (I-246) for the client.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared and filed stay of removal request (I-246) for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared and filed stay of removal request (I-246) for the client.</p>"
+    },
+    {
+     "name": "ICE Check-In",
+     "shortcut": "/ice_checkin",
+     "type": "text",
+     "text": "I attended ICE check-in with the client; provided updates and advocated for release/deferral.\n{key:tab}\nAttended ICE check-in with the client; provided updates and advocated for release/deferral.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I attended ICE check-in with the client; provided updates and advocated for release/deferral.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Attended ICE check-in with the client; provided updates and advocated for release/deferral.</p>"
+    },
+    {
+     "name": "Stay of Removal Filed",
+     "shortcut": "/stay_of_removal_filed",
+     "type": "text",
+     "text": "I filed a stay of removal request.\n{key:tab}\nI prepared supporting evidence and documented the basis for a stay.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a stay of removal request.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared supporting evidence and documented the basis for a stay.</p>"
+    },
+    {
+     "name": "Bond Hearing",
+     "shortcut": "/bond_hearing",
+     "type": "text",
+     "text": "I appeared at bond hearing; presented arguments for release and ability to pay.\n{key:tab}\nAppeared at bond hearing; presented arguments for release and ability to pay.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I appeared at bond hearing; presented arguments for release and ability to pay.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Appeared at bond hearing; presented arguments for release and ability to pay.</p>"
+    },
+    {
+     "name": "Imported Snippet",
+     "shortcut": "/12do",
+     "type": "text",
+     "text": "undefined",
+     "html": "undefined"
+    },
+    {
+     "name": "Custody Location Updated",
+     "shortcut": "/custody_location_update",
+     "type": "text",
+     "text": "I confirmed the detention facility location.\n{key:tab}\nI verified transfer status and updated the case file and contacts.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed the detention facility location.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I verified transfer status and updated the case file and contacts.</p>"
+    },
+    {
+     "name": "Prosecutorial Discretion Request Submitted",
+     "shortcut": "/pd_request_submitted",
+     "type": "text",
+     "text": "I submitted a request for prosecutorial discretion to ICE counsel.\n{key:tab}\nI presented equities, humanitarian factors, and case posture in support of favorable discretion.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I submitted a request for prosecutorial discretion to ICE counsel.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I presented equities, humanitarian factors, and case posture in support of favorable discretion.</p>"
+    },
+    {
+     "name": "Removal Warning Noted",
+     "shortcut": "/removal_warning_received",
+     "type": "text",
+     "text": "I documented receipt of a removal warning.\n{key:tab}\nI advised on compliance steps and explored available legal options.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I documented receipt of a removal warning.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I advised on compliance steps and explored available legal options.</p>"
+    },
+    {
+     "name": "Order of Supervision Reviewed",
+     "shortcut": "/order_supervision_review",
+     "type": "text",
+     "text": "I reviewed an order of supervision.\n{key:tab}\nI explained conditions, reporting schedule, and consequences for non‑compliance.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed an order of supervision.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained conditions, reporting schedule, and consequences for non&#x2011;compliance.</p>"
+    },
+    {
+     "name": "Call with ICE Counsel",
+     "shortcut": "/ice_counsel_call",
+     "type": "text",
+     "text": "I spoke with ICE counsel about case posture.\n{key:tab}\nI discussed possible stipulations, scheduling, or prosecutorial discretion.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I spoke with ICE counsel about case posture.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I discussed possible stipulations, scheduling, or prosecutorial discretion.</p>"
+    },
+    {
+     "name": "Repatriation Preparation",
+     "shortcut": "/repatriation_prep_notes",
+     "type": "text",
+     "text": "I prepared for repatriation logistics.\n{key:tab}\nI coordinated travel documents, personal effects, and family notifications as appropriate.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for repatriation logistics.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I coordinated travel documents, personal effects, and family notifications as appropriate.</p>"
+    },
+    {
+     "name": "Supervision Reporting Update",
+     "shortcut": "/supervision_update",
+     "type": "text",
+     "text": "I updated supervision reporting details.\n{key:tab}\nI confirmed frequency, method of reporting, and any special instructions.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I updated supervision reporting details.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed frequency, method of reporting, and any special instructions.</p>"
+    },
+    {
+     "name": "Bag Check and Travel Documents Reviewed",
+     "shortcut": "/bag_check_review",
+     "type": "text",
+     "text": "I reviewed bag‑check and travel document requirements for a scheduled removal.\n{key:tab}\nI confirmed logistics, collected necessary documents, and noted reporting instructions.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed bag&#x2011;check and travel document requirements for a scheduled removal.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed logistics, collected necessary documents, and noted reporting instructions.</p>"
+    },
+    {
+     "name": "ICE Check‑In Attended",
+     "shortcut": "/ice_checkin_attend",
+     "type": "text",
+     "text": "I attended a supervision check‑in with ICE.\n{key:tab}\nI confirmed reporting requirements and the next check‑in date.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I attended a supervision check&#x2011;in with ICE.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed reporting requirements and the next check&#x2011;in date.</p>"
+    },
+    {
+     "name": "Prosecutorial Discretion",
+     "shortcut": "/pd_request",
+     "type": "text",
+     "text": "I drafted and submitted prosecutorial discretion request to OPLA/ICE.\n{key:tab}\nDrafted and submitted prosecutorial discretion request to OPLA/ICE.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted and submitted prosecutorial discretion request to OPLA/ICE.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Drafted and submitted prosecutorial discretion request to OPLA/ICE.</p>"
+    },
+    {
+     "name": "Bond Follow-Up",
+     "shortcut": "/bond_followup",
+     "type": "text",
+     "text": "I updated the client/family after bond decision; explained payment or appeal options.\n{key:tab}\nUpdated the client/family after bond decision; explained payment or appeal options.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I updated the client/family after bond decision; explained payment or appeal options.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Updated the client/family after bond decision; explained payment or appeal options.</p>"
+    },
+    {
+     "name": "ICE Custody Check",
+     "shortcut": "/isd_custody",
+     "type": "text",
+     "text": "I communicated with ICE to confirm custody status or transfer for the client.\n{key:tab}\nCommunicated with ICE to confirm custody status or transfer for the client.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I communicated with ICE to confirm custody status or transfer for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Communicated with ICE to confirm custody status or transfer for the client.</p>"
+    },
+    {
+     "name": "Family Update",
+     "shortcut": "/family_update",
+     "type": "text",
+     "text": "I call with family of the client re: custody status, next hearing, or bond.\n{key:tab}\nCall with family of the client re: custody status, next hearing, or bond.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I call with family of the client re: custody status, next hearing, or bond.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Call with family of the client re: custody status, next hearing, or bond.</p>"
+    },
+    {
+     "name": "Bond Packet Prepared",
+     "shortcut": "/bond_packet",
+     "type": "text",
+     "text": "I prepared a bond hearing packet.\n{key:tab}\nI compiled support letters, financial documents, and a legal memorandum for the bond hearing.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared a bond hearing packet.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I compiled support letters, financial documents, and a legal memorandum for the bond hearing.</p>"
+    },
+    {
+     "name": "Bond Memorandum Drafted",
+     "shortcut": "/bond_memo",
+     "type": "text",
+     "text": "I drafted a legal memorandum in support of bond.\n{key:tab}\nI analyzed flight risk and danger factors and proposed conditions of release.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted a legal memorandum in support of bond.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I analyzed flight risk and danger factors and proposed conditions of release.</p>"
+    },
+    {
+     "name": "Bond Exhibits Gathered",
+     "shortcut": "/bond_exhibits",
+     "type": "text",
+     "text": "I gathered exhibits for a bond hearing.\n{key:tab}\nI organized documents demonstrating community ties, residence, and stability.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I gathered exhibits for a bond hearing.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized documents demonstrating community ties, residence, and stability.</p>"
+    },
+    {
+     "name": "Bond Decision Follow‑Up",
+     "shortcut": "/bond_decision_follow",
+     "type": "text",
+     "text": "I followed up after a bond decision.\n{key:tab}\nI explained the outcome, payment or appeal options, and next steps.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I followed up after a bond decision.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained the outcome, payment or appeal options, and next steps.</p>"
+    },
+    {
+     "name": "Bond Appeal Filed",
+     "shortcut": "/bond_appeal_filed",
+     "type": "text",
+     "text": "I filed an appeal of the bond decision.\n{key:tab}\nI prepared the notice, grounds for appeal, and requested the required transcript if applicable.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed an appeal of the bond decision.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared the notice, grounds for appeal, and requested the required transcript if applicable.</p>"
+    },
+    {
+     "name": "ICE Custody Status Confirmed",
+     "shortcut": "/ice_custody_status",
+     "type": "text",
+     "text": "I confirmed custody or transfer status with ICE.\n{key:tab}\nI contacted the appropriate office and documented facility and next steps.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed custody or transfer status with ICE.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I contacted the appropriate office and documented facility and next steps.</p>"
+    },
+    {
+     "name": "Parole Request Filed",
+     "shortcut": "/parole_request_filed",
+     "type": "text",
+     "text": "I filed a request for parole from detention.\n{key:tab}\nI submitted supporting evidence and humanitarian factors for release.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a request for parole from detention.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I submitted supporting evidence and humanitarian factors for release.</p>"
+    },
+    {
+     "name": "Bond Hearing Preparation",
+     "shortcut": "/bond_hearing_prep",
+     "type": "text",
+     "text": "I prepared for a bond hearing before the Immigration Court.\n{key:tab}\nI organized the packet, prepared talking points, and coordinated family attendance.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for a bond hearing before the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized the packet, prepared talking points, and coordinated family attendance.</p>"
+    },
+    {
+     "name": "Bond Conditions Reviewed",
+     "shortcut": "/bond_conditions_review",
+     "type": "text",
+     "text": "I reviewed bond conditions and reporting requirements.\n{key:tab}\nI explained obligations and calendared reporting dates.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed bond conditions and reporting requirements.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained obligations and calendared reporting dates.</p>"
+    },
+    {
+     "name": "Redetention Watch Noted",
+     "shortcut": "/custody_redetain_watch",
+     "type": "text",
+     "text": "I documented a risk of redetention by immigration authorities.\n{key:tab}\nI set monitoring reminders and identified potential pre‑custody legal options.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I documented a risk of redetention by immigration authorities.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I set monitoring reminders and identified potential pre&#x2011;custody legal options.</p>"
+    },
+    {
+     "name": "Imported Snippet",
+     "shortcut": "/13do",
+     "type": "text",
+     "text": "undefined",
+     "html": "undefined"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": ">CLIO / Case Management_fixed",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Record Release",
+     "shortcut": "/record_release",
+     "type": "text",
+     "text": "I prepared and sent record release/FOIA/G-28 to the agency.\n{key:tab}\nPrepared and sent record release/FOIA/G-28 to the agency.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared and sent record release/FOIA/G-28 to the agency.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared and sent record release/FOIA/G-28 to the agency.</p>"
+    },
+    {
+     "name": "Criminal Immigration Analysis",
+     "shortcut": "/criminal_imm",
+     "type": "text",
+     "text": "I reviewed criminal records and analyzed immigration consequences under INA §237/§212.\n{key:tab}\nReviewed criminal records and analyzed immigration consequences under INA §237/§212.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed criminal records and analyzed immigration consequences under INA &#xA7;237/&#xA7;212.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Reviewed criminal records and analyzed immigration consequences under INA &#xA7;237/&#xA7;212.</p>"
+    },
+    {
+     "name": "Certified Translation",
+     "shortcut": "/cert_of_trans",
+     "type": "text",
+     "text": "I prepared and filed certified translation of the document.\n{key:tab}\nPrepared and filed certified translation of the document.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared and filed certified translation of the document.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared and filed certified translation of the document.</p>"
+    },
+    {
+     "name": "Case Close",
+     "shortcut": "/case_close",
+     "type": "text",
+     "text": "I closed matter in Clio after resolution (grant, relief, voluntary departure, or removal).\n{key:tab}\nClosed matter in Clio after resolution (grant, relief, voluntary departure, or removal).",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I closed matter in Clio after resolution (grant, relief, voluntary departure, or removal).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Closed matter in Clio after resolution (grant, relief, voluntary departure, or removal).</p>"
+    },
+    {
+     "name": "Case Strategy",
+     "shortcut": "/case_strategy",
+     "type": "text",
+     "text": "I reviewed facts and developed removal defense strategy; considered relief options.\n{key:tab}\nReviewed facts and developed removal defense strategy; considered relief options.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed facts and developed removal defense strategy; considered relief options.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Reviewed facts and developed removal defense strategy; considered relief options.</p>"
+    },
+    {
+     "name": "Brief Drafting",
+     "shortcut": "/brief_draft",
+     "type": "text",
+     "text": "I drafted legal brief on the issue supporting the requested relief.\n{key:tab}\nDrafted legal brief on the issue supporting the requested relief.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted legal brief on the issue supporting the requested relief.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Drafted legal brief on the issue supporting the requested relief.</p>"
+    },
+    {
+     "name": "Deadline Reminder Created",
+     "shortcut": "/deadline_tickler",
+     "type": "text",
+     "text": "I created a deadline reminder in the case file.\n{key:tab}\nI calendared due dates and added tasks to ensure timely compliance.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I created a deadline reminder in the case file.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I calendared due dates and added tasks to ensure timely compliance.</p>"
+    },
+    {
+     "name": "Hearing Date Calendared",
+     "shortcut": "/calendar_hearing_date",
+     "type": "text",
+     "text": "I calendared a hearing date.\n{key:tab}\nI entered the hearing on the calendar and added preparation tasks.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I calendared a hearing date.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I entered the hearing on the calendar and added preparation tasks.</p>"
+    },
+    {
+     "name": "File Organization Completed",
+     "shortcut": "/file_organization",
+     "type": "text",
+     "text": "I organized the case file.\n{key:tab}\nI standardized folders, labeled exhibits, and archived superseded drafts.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized the case file.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I standardized folders, labeled exhibits, and archived superseded drafts.</p>"
+    },
+    {
+     "name": "Team Strategy Meeting",
+     "shortcut": "/team_strategy_meeting",
+     "type": "text",
+     "text": "I held an internal strategy meeting.\n{key:tab}\nI reviewed case posture, assigned responsibilities, and documented decisions.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I held an internal strategy meeting.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed case posture, assigned responsibilities, and documented decisions.</p>"
+    },
+    {
+     "name": "Supervision Requirements Memorandum",
+     "shortcut": "/supervision_requirements_memo",
+     "type": "text",
+     "text": "I drafted a memorandum on supervision requirements.\n{key:tab}\nI summarized reporting obligations and calendared follow-up dates.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted a memorandum on supervision requirements.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I summarized reporting obligations and calendared follow-up dates.</p>"
+    },
+    {
+     "name": "Status Report Drafted",
+     "shortcut": "/status_report_drafted",
+     "type": "text",
+     "text": "I drafted a case status report.\n{key:tab}\nI summarized milestones, outstanding items, and upcoming deadlines.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted a case status report.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I summarized milestones, outstanding items, and upcoming deadlines.</p>"
+    }
+   ]
+  }
+ ]
+}
