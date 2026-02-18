@@ -1,0 +1,154 @@
+// SnipLogic Database Schema
+// Multi-tenant SaaS: every row is scoped to an Organization
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// TENANT / ORGANIZATION
+// ─────────────────────────────────────────────
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique  // used in URLs, e.g. "lookmc"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users      User[]
+  workspaces Workspace[]
+}
+
+// ─────────────────────────────────────────────
+// USERS
+// ─────────────────────────────────────────────
+
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  passwordHash   String
+  firstName      String
+  lastName       String
+  isGlobalAdmin  Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  // The user's own personal workspace (one per user, created on registration)
+  personalWorkspace Workspace? @relation("PersonalWorkspace")
+
+  workspaceRoles WorkspaceRole[]
+  folderRoles    FolderRole[]
+}
+
+// ─────────────────────────────────────────────
+// WORKSPACES
+// ─────────────────────────────────────────────
+
+model Workspace {
+  id         String   @id @default(cuid())
+  name       String
+  isPersonal Boolean  @default(false)   // true = this user's private workspace
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  // Only set when isPersonal = true
+  ownerId String?  @unique
+  owner   User?    @relation("PersonalWorkspace", fields: [ownerId], references: [id])
+
+  folders        Folder[]
+  workspaceRoles WorkspaceRole[]
+}
+
+// ─────────────────────────────────────────────
+// FOLDERS
+// ─────────────────────────────────────────────
+
+model Folder {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  snippets    Snippet[]
+  folderRoles FolderRole[]
+}
+
+// ─────────────────────────────────────────────
+// SNIPPETS
+// ─────────────────────────────────────────────
+
+model Snippet {
+  id        String      @id @default(cuid())
+  name      String
+  shortcut  String?     // e.g. "/noteadreceipt" — optional, must be unique within org
+  content   String      // plain text content (primary)
+  htmlContent String?   // optional rich HTML version
+  isActive  Boolean     @default(true)
+  sortOrder Int         @default(0)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  folderId String
+  folder   Folder @relation(fields: [folderId], references: [id], onDelete: Cascade)
+
+  // Shortcuts must be unique per organization (enforced at app level via organizationId)
+  organizationId String
+
+  @@index([organizationId, shortcut])
+  @@index([folderId])
+}
+
+// ─────────────────────────────────────────────
+// PERMISSIONS
+// ─────────────────────────────────────────────
+
+enum RoleType {
+  WORKSPACE_ADMIN
+  EDITOR
+  VIEWER
+}
+
+// Workspace-level permission — applies to all folders unless overridden
+model WorkspaceRole {
+  id   String   @id @default(cuid())
+  role RoleType
+
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, workspaceId])
+}
+
+// Folder-level permission — only applies when user has no workspace-level role
+model FolderRole {
+  id   String   @id @default(cuid())
+  role RoleType
+
+  userId   String
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  folderId String
+  folder   Folder @relation(fields: [folderId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, folderId])
+}

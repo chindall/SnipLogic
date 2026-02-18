@@ -1,0 +1,19 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": "Docketing - WIP_fixed",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Rcvd NOH, sent letter to CL.",
+     "shortcut": "/procnoh",
+     "type": "html",
+     "text": "Received and processed notice of individual merits hearing from [City] Immigration Court by [ECAS/mail].{key:tab}Hearing is set for [date and time]. Completed the following: \n\n\t1. Updated information in Clio custom field.\n\t2. Review calendar for confclits\n\t3. Entered hearing on attorney’s calendar and added case assistant as attendee: Ind Hrg [City] Immigration Court IJ [Name]. The hearing is [IN PERSON / INTERNET BASED].\n\t4. Scheduled 30-day evidentiary deadline (\"All day\") prior to hearing date: DUE - Dox due at [City] Immigration Court - [ eROP / pROP].\n\t5. Scanned and/or saved NOH to IJ folder: NOH REG MM-DD-YYYY.\n\t6. Prepared individual hearing letter to client(s), appended copy of NOH. Sent to clients via first class mail or posted on outgoing mail Slack CH. Saved copy of letter to lead client's Correspondence file, and shared via Clio client portal.\n\t7. Sent Slack message to attorney and case assistant with client case number and name: 2024-05001 - De Tal, Fulano - Received and processed notice of individual merits hearing from [City] Immigration Court by [ECAS/mail].\n{key:tab}{time: MM/DD/YYYY}{key:tab}",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Received and processed notice of individual merits hearing from [City] Immigration Court by [ECAS/mail].{key:tab}Hearing is set for [date and time]. Completed the following:&#xA0;</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p><ol><li>Updated information in Clio custom field.</li><li><b>Review calendar for confclits</b></li><li>Entered hearing on attorney&#x2019;s calendar and added case assistant as attendee: Ind Hrg [City] Immigration Court IJ [Name]. The hearing is [IN PERSON / INTERNET BASED].</li><li>Scheduled 30-day evidentiary deadline (&#x22;All day&#x22;) prior to hearing date: DUE - Dox due at [City] Immigration Court - [ eROP / pROP].</li><li>Scanned and/or saved NOH to IJ folder: NOH REG MM-DD-YYYY.</li><li>Prepared individual hearing letter to client(s), appended copy of NOH. Sent to clients via first class mail <b>or </b>posted on outgoing mail Slack CH. Saved copy of letter to lead client&#x27;s Correspondence file, and shared via Clio client portal.</li><li>Sent Slack message to attorney and case assistant with client case number and name: <b>2024-05001 - De Tal, Fulano</b> - Received and processed notice of individual merits hearing from [City] Immigration Court by [ECAS/mail].</li></ol><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}{time: MM/DD/YYYY}{key:tab}</p>"
+    }
+   ]
+  }
+ ]
+}

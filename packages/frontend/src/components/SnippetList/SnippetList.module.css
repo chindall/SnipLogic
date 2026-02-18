@@ -1,0 +1,122 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  height: var(--header-height);
+  border-bottom: var(--border-width) solid var(--color-content-border);
+  flex-shrink: 0;
+  gap: var(--space-4);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.breadcrumbWs {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.breadcrumbFolder {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumbEmpty {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.chevron {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.newBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.newBtn:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+}
+
+.newBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Snippet list ─────────────────────────────────────────────── */
+.listArea {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Skeleton loading cards ───────────────────────────────────── */
+.skeletonCard {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: var(--border-width) solid var(--color-content-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skeletonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.skeletonLine {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-content-subtle) 25%,
+    var(--color-content-border) 37%,
+    var(--color-content-subtle) 63%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeletonTitle  { height: 14px; width: 40%; }
+.skeletonBadge  { height: 20px; width: 100px; border-radius: var(--radius-full); }
+.skeletonBody   { height: 13px; width: 90%; }
+.skeletonBodyShort { height: 13px; width: 65%; }

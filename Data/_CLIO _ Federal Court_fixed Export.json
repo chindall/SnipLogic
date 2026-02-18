@@ -1,0 +1,96 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": ">CLIO / Federal Court_fixed",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Mandamus Filing",
+     "shortcut": "/mandamus",
+     "type": "text",
+     "text": "I drafted and filed federal complaint for writ of mandamus/APA delay re: the application.\n{key:tab}\nDrafted and filed federal complaint for writ of mandamus/APA delay re: the application.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted and filed federal complaint for writ of mandamus/APA delay re: the application.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Drafted and filed federal complaint for writ of mandamus/APA delay re: the application.</p>"
+    },
+    {
+     "name": "Habeas Petition",
+     "shortcut": "/habeas",
+     "type": "text",
+     "text": "I prepared and filed habeas petition challenging unlawful detention of the client.\n{key:tab}\nPrepared and filed habeas petition challenging unlawful detention of the client.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared and filed habeas petition challenging unlawful detention of the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared and filed habeas petition challenging unlawful detention of the client.</p>"
+    },
+    {
+     "name": "Federal Case Update",
+     "shortcut": "/federal_update",
+     "type": "text",
+     "text": "I communicated with AUSA/DOJ about pending litigation in the case.\n{key:tab}\nCommunicated with AUSA/DOJ about pending litigation in the case.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I communicated with AUSA/DOJ about pending litigation in the case.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Communicated with AUSA/DOJ about pending litigation in the case.</p>"
+    },
+    {
+     "name": "Mandamus Complaint Drafted",
+     "shortcut": "/mandamus_draft",
+     "type": "text",
+     "text": "I drafted a federal complaint seeking mandamus relief.\n{key:tab}\nI outlined jurisdiction, cause of action, and requested relief due to agency delay.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted a federal complaint seeking mandamus relief.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I outlined jurisdiction, cause of action, and requested relief due to agency delay.</p>"
+    },
+    {
+     "name": "Mandamus Complaint Filed",
+     "shortcut": "/mandamus_filed",
+     "type": "text",
+     "text": "I filed a mandamus complaint in federal court.\n{key:tab}\nI confirmed service requirements and tracked initial deadlines.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a mandamus complaint in federal court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed service requirements and tracked initial deadlines.</p>"
+    },
+    {
+     "name": "Habeas Petition Drafted",
+     "shortcut": "/habeas_draft",
+     "type": "text",
+     "text": "I drafted a habeas corpus petition challenging detention.\n{key:tab}\nI set out custody facts, legal grounds, and requested relief.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted a habeas corpus petition challenging detention.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I set out custody facts, legal grounds, and requested relief.</p>"
+    },
+    {
+     "name": "Habeas Petition Filed",
+     "shortcut": "/habeas_filed",
+     "type": "text",
+     "text": "I filed a habeas corpus petition in federal court.\n{key:tab}\nI saved filed copies, noted deadlines, and prepared next steps.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a habeas corpus petition in federal court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I saved filed copies, noted deadlines, and prepared next steps.</p>"
+    },
+    {
+     "name": "Preliminary Injunction Motion Filed",
+     "shortcut": "/pi_motion_filed",
+     "type": "text",
+     "text": "I filed a motion for a preliminary injunction.\n{key:tab}\nI identified irreparable harm, likelihood of success, and balance of equities in the motion.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion for a preliminary injunction.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I identified irreparable harm, likelihood of success, and balance of equities in the motion.</p>"
+    },
+    {
+     "name": "Stay Request Filed in Federal Court",
+     "shortcut": "/stay_motion_fed",
+     "type": "text",
+     "text": "I filed a motion or request for a stay in federal court.\n{key:tab}\nI explained the legal basis and immediate necessity for interim relief.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion or request for a stay in federal court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained the legal basis and immediate necessity for interim relief.</p>"
+    },
+    {
+     "name": "Joint Stipulation Prepared",
+     "shortcut": "/joint_stip_fed",
+     "type": "text",
+     "text": "I prepared a joint stipulation with government counsel.\n{key:tab}\nI coordinated language and documented agreed terms and schedules.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared a joint stipulation with government counsel.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I coordinated language and documented agreed terms and schedules.</p>"
+    },
+    {
+     "name": "Federal Case Status Call",
+     "shortcut": "/federal_status_call",
+     "type": "text",
+     "text": "I spoke with government counsel regarding the status of a federal case.\n{key:tab}\nI discussed scheduling, briefing, and case resolution options.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I spoke with government counsel regarding the status of a federal case.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I discussed scheduling, briefing, and case resolution options.</p>"
+    },
+    {
+     "name": "Imported Snippet",
+     "shortcut": "/11do",
+     "type": "text",
+     "text": "undefined",
+     "html": "undefined"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+node_modules/
+.claude/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Vite
+packages/frontend/dist/
+
+# Extension build
+packages/extension/dist/

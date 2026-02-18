@@ -1,0 +1,19 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": "KMC Personal",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Email",
+     "shortcut": "/eml",
+     "type": "text",
+     "text": "kevin@sfgreencard.com\n",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">kevin@sfgreencard.com</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\"><br/></p>"
+    }
+   ]
+  }
+ ]
+}

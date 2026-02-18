@@ -1,0 +1,250 @@
+{
+ "version": 7,
+ "folders": [
+  {
+   "name": ">CLIO / Removal",
+   "info": "",
+   "app": "TEXT",
+   "snippets": [
+    {
+     "name": "Client Update",
+     "shortcut": "/client_update",
+     "type": "text",
+     "text": "I provided the client with status update on , answered questions, and explained next actions.\n{key:tab}\nProvided the client with status update on , answered questions, and explained next actions.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I provided the client with status update on , answered questions, and explained next actions.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Provided the client with status update on , answered questions, and explained next actions.</p>"
+    },
+    {
+     "name": "ROP Review",
+     "shortcut": "/rop_review",
+     "type": "text",
+     "text": "I reviewed Record of Proceedings (ROP) for the client, identified missing documents or exhibits.\n{key:tab}\nReviewed Record of Proceedings (ROP) for the client, identified missing documents or exhibits.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed Record of Proceedings (ROP) for the client, identified missing documents or exhibits.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Reviewed Record of Proceedings (ROP) for the client, identified missing documents or exhibits.</p>"
+    },
+    {
+     "name": "Master Calendar Prep",
+     "shortcut": "/master_prep",
+     "type": "text",
+     "text": "I prepared the client for Master Calendar Hearing on the hearing date; reviewed pleadings and case strategy.\n{key:tab}\nPrepared the client for Master Calendar Hearing on the hearing date; reviewed pleadings and case strategy.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared the client for Master Calendar Hearing on the hearing date; reviewed pleadings and case strategy.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared the client for Master Calendar Hearing on the hearing date; reviewed pleadings and case strategy.</p>"
+    },
+    {
+     "name": "Master Calendar Hearing",
+     "shortcut": "/master_attend",
+     "type": "text",
+     "text": "I appeared for Master Calendar Hearing before IJ the Immigration Judge; updated case status and future hearing date.\n{key:tab}\nAppeared for Master Calendar Hearing before IJ the Immigration Judge; updated case status and future hearing date.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I appeared for Master Calendar Hearing before IJ the Immigration Judge; updated case status and future hearing date.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Appeared for Master Calendar Hearing before IJ the Immigration Judge; updated case status and future hearing date.</p>"
+    },
+    {
+     "name": "Merits Prep",
+     "shortcut": "/merits_prep",
+     "type": "text",
+     "text": "I prepared the client for Individual/Merits Hearing; practiced testimony and reviewed evidence.\n{key:tab}\nPrepared the client for Individual/Merits Hearing; practiced testimony and reviewed evidence.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared the client for Individual/Merits Hearing; practiced testimony and reviewed evidence.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Prepared the client for Individual/Merits Hearing; practiced testimony and reviewed evidence.</p>"
+    },
+    {
+     "name": "Merits Hearing",
+     "shortcut": "/merits_attend",
+     "type": "text",
+     "text": "I attended Individual Hearing for the client; presented evidence and examined witnesses.\n{key:tab}\nAttended Individual Hearing for the client; presented evidence and examined witnesses.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I attended Individual Hearing for the client; presented evidence and examined witnesses.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Attended Individual Hearing for the client; presented evidence and examined witnesses.</p>"
+    },
+    {
+     "name": "Court Motion",
+     "shortcut": "/motion_court",
+     "type": "text",
+     "text": "I drafted and filed motion to the agency re: (e.g., change venue, terminate).\n{key:tab}\nDrafted and filed motion to the agency re: (e.g., change venue, terminate).",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted and filed motion to the agency re: (e.g., change venue, terminate).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Drafted and filed motion to the agency re: (e.g., change venue, terminate).</p>"
+    },
+    {
+     "name": "EOIR Filing",
+     "shortcut": "/eoir_filing",
+     "type": "text",
+     "text": "I filed EOIR-28 and supporting docs for the client.\n{key:tab}\nFiled EOIR-28 and supporting docs for the client.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed EOIR-28 and supporting docs for the client.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Filed EOIR-28 and supporting docs for the client.</p>"
+    },
+    {
+     "name": "EOIR Service",
+     "shortcut": "/eoir_service",
+     "type": "text",
+     "text": "I served motion/brief on DHS and filed proof of service with EOIR.\n{key:tab}\nServed motion/brief on DHS and filed proof of service with EOIR.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I served motion/brief on DHS and filed proof of service with EOIR.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Served motion/brief on DHS and filed proof of service with EOIR.</p>"
+    },
+    {
+     "name": "Packet Prep",
+     "shortcut": "/packet_prep",
+     "type": "text",
+     "text": "I organized and paginated exhibit packet with index and tabs for EOIR filing.\n{key:tab}\nOrganized and paginated exhibit packet with index and tabs for EOIR filing.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized and paginated exhibit packet with index and tabs for EOIR filing.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Organized and paginated exhibit packet with index and tabs for EOIR filing.</p>"
+    },
+    {
+     "name": "File Audit",
+     "shortcut": "/file_audit",
+     "type": "text",
+     "text": "I audited file for completeness before .\n{key:tab}\nAudited file for completeness before .",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I audited file for completeness before .</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Audited file for completeness before .</p>"
+    },
+    {
+     "name": "Calendar Update",
+     "shortcut": "/calendar_update",
+     "type": "text",
+     "text": "I updated Clio calendar with next deadlines/hearings.\n{key:tab}\nUpdated Clio calendar with next deadlines/hearings.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I updated Clio calendar with next deadlines/hearings.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Updated Clio calendar with next deadlines/hearings.</p>"
+    },
+    {
+     "name": "Motion Research",
+     "shortcut": "/motion_research",
+     "type": "text",
+     "text": "I researched and prepared motion to the agency on .\n{key:tab}\nResearched and prepared motion to the agency on .",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I researched and prepared motion to the agency on .</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">Researched and prepared motion to the agency on .</p>"
+    },
+    {
+     "name": "EOIR-28 Filed",
+     "shortcut": "/eoir28_filed",
+     "type": "text",
+     "text": "I filed a Notice of Appearance (EOIR-28).\n{key:tab}\nI entered my appearance and confirmed service according to Immigration Court practice.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a Notice of Appearance (EOIR-28).</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I entered my appearance and confirmed service according to Immigration Court practice.</p>"
+    },
+    {
+     "name": "Master Calendar Preparation",
+     "shortcut": "/master_prep",
+     "type": "text",
+     "text": "I prepared for a Master Calendar Hearing.\n{key:tab}\nI reviewed pleadings, checked filing deadlines, and prepared a short case summary for the hearing.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for a Master Calendar Hearing.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed pleadings, checked filing deadlines, and prepared a short case summary for the hearing.</p>"
+    },
+    {
+     "name": "Master Calendar Appearance",
+     "shortcut": "/master_attend",
+     "type": "text",
+     "text": "I appeared for a Master Calendar Hearing before the Immigration Court.\n{key:tab}\nI announced my appearance, addressed scheduling, and confirmed the next hearing date.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I appeared for a Master Calendar Hearing before the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I announced my appearance, addressed scheduling, and confirmed the next hearing date.</p>"
+    },
+    {
+     "name": "Continuance Motion Filed",
+     "shortcut": "/continuance_motion",
+     "type": "text",
+     "text": "I filed a motion to continue the hearing.\n{key:tab}\nI provided the basis for good cause and served opposing counsel.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion to continue the hearing.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I provided the basis for good cause and served opposing counsel.</p>"
+    },
+    {
+     "name": "Change of Venue Motion Filed",
+     "shortcut": "/change_venue_motion",
+     "type": "text",
+     "text": "I filed a motion to change venue.\n{key:tab}\nI explained the grounds for transfer and provided the new court information for scheduling.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion to change venue.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained the grounds for transfer and provided the new court information for scheduling.</p>"
+    },
+    {
+     "name": "Motion to Terminate Filed",
+     "shortcut": "/terminate_motion",
+     "type": "text",
+     "text": "I filed a motion to terminate removal proceedings.\n{key:tab}\nI outlined legal grounds and attached supporting evidence for termination.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion to terminate removal proceedings.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I outlined legal grounds and attached supporting evidence for termination.</p>"
+    },
+    {
+     "name": "Administrative Closure Motion Filed",
+     "shortcut": "/admin_close_motion",
+     "type": "text",
+     "text": "I filed a motion for administrative closure.\n{key:tab}\nI argued that administrative closure is appropriate and served all parties.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion for administrative closure.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I argued that administrative closure is appropriate and served all parties.</p>"
+    },
+    {
+     "name": "Motion to Reopen Filed",
+     "shortcut": "/reopen_motion",
+     "type": "text",
+     "text": "I filed a motion to reopen proceedings.\n{key:tab}\nI presented new evidence or changed circumstances supporting reopening.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion to reopen proceedings.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I presented new evidence or changed circumstances supporting reopening.</p>"
+    },
+    {
+     "name": "Motion to Reconsider Filed",
+     "shortcut": "/reconsider_motion",
+     "type": "text",
+     "text": "I filed a motion to reconsider.\n{key:tab}\nI explained legal or factual errors and requested correction by the Immigration Court.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a motion to reconsider.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I explained legal or factual errors and requested correction by the Immigration Court.</p>"
+    },
+    {
+     "name": "Merits Hearing Preparation",
+     "shortcut": "/merits_prep",
+     "type": "text",
+     "text": "I prepared for an Individual (Merits) Hearing.\n{key:tab}\nI organized exhibits, drafted a direct examination outline, and prepared witnesses.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared for an Individual (Merits) Hearing.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I organized exhibits, drafted a direct examination outline, and prepared witnesses.</p>"
+    },
+    {
+     "name": "Merits Hearing Appearance",
+     "shortcut": "/merits_attend",
+     "type": "text",
+     "text": "I appeared for an Individual (Merits) Hearing before the Immigration Court.\n{key:tab}\nI presented evidence, examined witnesses, and argued the requested relief.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I appeared for an Individual (Merits) Hearing before the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I presented evidence, examined witnesses, and argued the requested relief.</p>"
+    },
+    {
+     "name": "Service and Proof of Service",
+     "shortcut": "/eoir_service",
+     "type": "text",
+     "text": "I served filings on the Department of Homeland Security and prepared proof of service.\n{key:tab}\nI verified service requirements and filed the proof with the Immigration Court.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I served filings on the Department of Homeland Security and prepared proof of service.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I verified service requirements and filed the proof with the Immigration Court.</p>"
+    },
+    {
+     "name": "Requested Hearing Transcript",
+     "shortcut": "/transcript_request",
+     "type": "text",
+     "text": "I requested a hearing transcript from the Immigration Court.\n{key:tab}\nI submitted the request and noted the expected processing timeline.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I requested a hearing transcript from the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I submitted the request and noted the expected processing timeline.</p>"
+    },
+    {
+     "name": "Record of Proceedings Review",
+     "shortcut": "/rop_review",
+     "type": "text",
+     "text": "I reviewed the Record of Proceedings.\n{key:tab}\nI checked for completeness, noted missing documents, and planned follow-up requests.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed the Record of Proceedings.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I checked for completeness, noted missing documents, and planned follow-up requests.</p>"
+    },
+    {
+     "name": "BIA Appeal Filed",
+     "shortcut": "/bia_notice_file",
+     "type": "text",
+     "text": "I filed a notice of appeal with the Board of Immigration Appeals.\n{key:tab}\nI docketed briefing deadlines and confirmed service.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I filed a notice of appeal with the Board of Immigration Appeals.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I docketed briefing deadlines and confirmed service.</p>"
+    },
+    {
+     "name": "BIA Brief Drafted",
+     "shortcut": "/bia_brief_draft",
+     "type": "text",
+     "text": "I drafted an appeal brief for the Board of Immigration Appeals.\n{key:tab}\nI framed issues, analyzed case law, and prepared supporting citations.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I drafted an appeal brief for the Board of Immigration Appeals.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I framed issues, analyzed case law, and prepared supporting citations.</p>"
+    },
+    {
+     "name": "Updated Pleadings",
+     "shortcut": "/pleadings_update",
+     "type": "text",
+     "text": "I updated pleadings before the Immigration Court.\n{key:tab}\nI confirmed removability allegations and relief applications and noted any objections.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I updated pleadings before the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I confirmed removability allegations and relief applications and noted any objections.</p>"
+    },
+    {
+     "name": "Prepared Stipulation",
+     "shortcut": "/stipulation_prep",
+     "type": "text",
+     "text": "I prepared a stipulation for submission to the Immigration Court.\n{key:tab}\nI coordinated language with the Department of Homeland Security and finalized the draft.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared a stipulation for submission to the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I coordinated language with the Department of Homeland Security and finalized the draft.</p>"
+    },
+    {
+     "name": "Reviewed Court Order",
+     "shortcut": "/order_review",
+     "type": "text",
+     "text": "I reviewed a recent order from the Immigration Court.\n{key:tab}\nI summarized directives, calendared deadlines, and planned compliance steps.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I reviewed a recent order from the Immigration Court.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I summarized directives, calendared deadlines, and planned compliance steps.</p>"
+    },
+    {
+     "name": "CAT/Withholding Prep",
+     "shortcut": "/withhold_cat_prep",
+     "type": "text",
+     "text": "I prepared filings related to protection under the Convention Against Torture or withholding of removal.\n{key:tab}\nI collected country conditions, drafted declarations, and prepared legal arguments.",
+     "html": "<p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I prepared filings related to protection under the Convention Against Torture or withholding of removal.</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">{key:tab}</p><p style=\"margin:0px !important;padding:0px !important;\" data-mce-style=\"margin:0px !important;padding:0px !important;\">I collected country conditions, drafted declarations, and prepared legal arguments.</p>"
+    },
+    {
+     "name": "Imported Snippet",
+     "shortcut": "/14do",
+     "type": "text",
+     "text": "undefined",
+     "html": "undefined"
+    }
+   ]
+  }
+ ]
+}
