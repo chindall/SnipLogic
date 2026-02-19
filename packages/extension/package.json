@@ -1,0 +1,14 @@
+{
+  "name": "@sniplogic/extension",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:icons": "node scripts/make-icons.cjs",
+    "build": "tsc && node scripts/copy-assets.cjs",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.7.3"
+  }
+}
