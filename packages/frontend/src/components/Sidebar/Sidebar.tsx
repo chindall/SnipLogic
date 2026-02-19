@@ -1,11 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useWorkspaces } from '../../api/workspaces'
-import { useFolders } from '../../api/folders'
+import { useFolders, type Folder } from '../../api/folders'
 import { useUiStore } from '../../store/uiStore'
 import { useAuthStore } from '../../store/authStore'
 import WorkspaceItem from './WorkspaceItem'
 import FolderItem from './FolderItem'
+import FolderModal from './FolderModal'
+import FolderDeleteDialog from './FolderDeleteDialog'
 import styles from './Sidebar.module.css'
 
 export default function Sidebar() {
@@ -16,6 +18,13 @@ export default function Sidebar() {
 
   const { data: workspaces, isLoading: loadingWorkspaces } = useWorkspaces()
   const { data: folders, isLoading: loadingFolders } = useFolders(selectedWorkspaceId)
+
+  const canWrite = workspaces?.find((w) => w.id === selectedWorkspaceId)?.canWrite ?? false
+
+  // Folder modal state
+  const [folderModalMode, setFolderModalMode] = useState<'create' | 'rename' | null>(null)
+  const [renamingFolder, setRenamingFolder] = useState<Folder | null>(null)
+  const [deletingFolder, setDeletingFolder] = useState<Folder | null>(null)
 
   // Auto-select the first workspace when data first loads
   useEffect(() => {
@@ -29,6 +38,28 @@ export default function Sidebar() {
   function handleLogout() {
     clearAuth()
     navigate('/login')
+  }
+
+  function handleRenameFolder(folder: Folder) {
+    setRenamingFolder(folder)
+    setFolderModalMode('rename')
+  }
+
+  function handleDeleteFolder(folder: Folder) {
+    setDeletingFolder(folder)
+  }
+
+  function closeFolderModal() {
+    setFolderModalMode(null)
+    setRenamingFolder(null)
+  }
+
+  function closeFolderDeleteDialog() {
+    // If the deleted folder was selected, deselect it
+    if (deletingFolder && deletingFolder.id === selectedFolderId) {
+      setSelectedFolder(null)
+    }
+    setDeletingFolder(null)
   }
 
   const initials = user
@@ -75,7 +106,20 @@ export default function Sidebar() {
         {selectedWorkspaceId && (
           <>
             <div className={styles.sectionDivider} />
-            <p className={styles.sectionLabel}>Folders</p>
+            <div className={styles.foldersSectionHeader}>
+              <p className={styles.sectionLabel}>Folders</p>
+              {canWrite && <button
+                className={styles.addFolderBtn}
+                onClick={() => setFolderModalMode('create')}
+                title="New folder"
+                aria-label="New folder"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>}
+            </div>
             <ul className={styles.navList}>
               {loadingFolders && (
                 <>
@@ -92,13 +136,30 @@ export default function Sidebar() {
                   key={folder.id}
                   folder={folder}
                   isActive={folder.id === selectedFolderId}
+                  canWrite={canWrite}
                   onClick={() => setSelectedFolder(folder.id)}
+                  onRename={handleRenameFolder}
+                  onDelete={handleDeleteFolder}
                 />
               ))}
             </ul>
           </>
         )}
       </div>
+
+      {/* Team button */}
+      <button
+        className={`${styles.importBtn} ${location.pathname === '/users' ? styles.importBtnActive : ''}`}
+        onClick={() => navigate('/users')}
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+        Team
+      </button>
 
       {/* Import button */}
       <button
@@ -135,6 +196,25 @@ export default function Sidebar() {
           </svg>
         </button>
       </div>
+
+      {/* Folder create/rename modal */}
+      {folderModalMode && selectedWorkspaceId && (
+        <FolderModal
+          mode={folderModalMode}
+          workspaceId={selectedWorkspaceId}
+          folderId={renamingFolder?.id}
+          currentName={renamingFolder?.name}
+          onClose={closeFolderModal}
+        />
+      )}
+
+      {/* Folder delete dialog */}
+      {deletingFolder && (
+        <FolderDeleteDialog
+          folder={deletingFolder}
+          onClose={closeFolderDeleteDialog}
+        />
+      )}
     </aside>
   )
 }

@@ -3,11 +3,12 @@ import styles from './SnippetCard.module.css'
 
 interface SnippetCardProps {
   snippet: Snippet
+  canWrite: boolean
   onEdit: (id: string) => void
   onDelete: (id: string) => void
 }
 
-export default function SnippetCard({ snippet, onEdit, onDelete }: SnippetCardProps) {
+export default function SnippetCard({ snippet, canWrite, onEdit, onDelete }: SnippetCardProps) {
   const preview = snippet.content.length > 120
     ? snippet.content.slice(0, 120).trimEnd() + '…'
     : snippet.content
@@ -23,20 +24,22 @@ export default function SnippetCard({ snippet, onEdit, onDelete }: SnippetCardPr
 
       <p className={styles.preview}>{preview}</p>
 
-      <div className={styles.actions}>
-        <button
-          className={styles.actionBtn}
-          onClick={() => onEdit(snippet.id)}
-        >
-          Edit
-        </button>
-        <button
-          className={`${styles.actionBtn} ${styles.danger}`}
-          onClick={() => onDelete(snippet.id)}
-        >
-          Delete
-        </button>
-      </div>
+      {canWrite && (
+        <div className={styles.actions}>
+          <button
+            className={styles.actionBtn}
+            onClick={() => onEdit(snippet.id)}
+          >
+            Edit
+          </button>
+          <button
+            className={`${styles.actionBtn} ${styles.danger}`}
+            onClick={() => onDelete(snippet.id)}
+          >
+            Delete
+          </button>
+        </div>
+      )}
     </div>
   )
 }

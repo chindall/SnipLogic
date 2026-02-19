@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import { useUiStore } from '../../store/uiStore'
 import { useWorkspaces } from '../../api/workspaces'
 import { useFolders } from '../../api/folders'
-import { useSnippets, useSnippetSearch } from '../../api/snippets'
+import { useSnippets, useSnippetSearch, type Snippet } from '../../api/snippets'
 import SearchBar from './SearchBar'
 import SnippetCard from './SnippetCard'
 import EmptyState from './EmptyState'
+import SnippetModal from './SnippetModal'
+import DeleteConfirmDialog from './DeleteConfirmDialog'
 import styles from './SnippetList.module.css'
 
 // Shimmer skeleton shown while data loads
@@ -33,18 +36,40 @@ export default function SnippetList() {
   const snippets = isSearching ? searchResults : folderSnippets
   const isLoading = isSearching ? loadingSearch : loadingFolder
 
-  // Breadcrumb labels
-  const workspaceName = workspaces?.find((w) => w.id === selectedWorkspaceId)?.name
+  // Breadcrumb labels + permissions
+  const selectedWorkspace = workspaces?.find((w) => w.id === selectedWorkspaceId)
+  const workspaceName = selectedWorkspace?.name
   const folderName = folders?.find((f) => f.id === selectedFolderId)?.name
+  const canWrite = selectedWorkspace?.canWrite ?? false
+
+  // Modal state
+  const [modalMode, setModalMode] = useState<'create' | 'edit' | null>(null)
+  const [editingSnippet, setEditingSnippet] = useState<Snippet | null>(null)
+  const [deletingSnippet, setDeletingSnippet] = useState<Snippet | null>(null)
+
+  function handleNew() {
+    setEditingSnippet(null)
+    setModalMode('create')
+  }
 
   function handleEdit(id: string) {
-    // TODO: open snippet editor modal (next phase)
-    console.log('Edit snippet', id)
+    const snippet = snippets?.find((s) => s.id === id) ?? null
+    setEditingSnippet(snippet)
+    setModalMode('edit')
   }
 
   function handleDelete(id: string) {
-    // TODO: confirm + delete (next phase)
-    console.log('Delete snippet', id)
+    const snippet = snippets?.find((s) => s.id === id) ?? null
+    setDeletingSnippet(snippet)
+  }
+
+  function closeModal() {
+    setModalMode(null)
+    setEditingSnippet(null)
+  }
+
+  function closeDeleteDialog() {
+    setDeletingSnippet(null)
   }
 
   // Determine which empty state to show
@@ -84,8 +109,9 @@ export default function SnippetList() {
 
         <button
           className={styles.newBtn}
-          disabled={!selectedFolderId}
-          title={!selectedFolderId ? 'Select a folder first' : 'Create a new snippet'}
+          disabled={!selectedFolderId || !canWrite}
+          title={!selectedFolderId ? 'Select a folder first' : !canWrite ? 'You have read-only access' : 'Create a new snippet'}
+          onClick={handleNew}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <line x1="12" y1="5" x2="12" y2="19" />
@@ -117,11 +143,30 @@ export default function SnippetList() {
           <SnippetCard
             key={snippet.id}
             snippet={snippet}
+            canWrite={canWrite}
             onEdit={handleEdit}
             onDelete={handleDelete}
           />
         ))}
       </div>
+
+      {/* Snippet create/edit modal */}
+      {modalMode && selectedFolderId && (
+        <SnippetModal
+          mode={modalMode}
+          folderId={selectedFolderId}
+          snippet={editingSnippet ?? undefined}
+          onClose={closeModal}
+        />
+      )}
+
+      {/* Delete confirmation dialog */}
+      {deletingSnippet && (
+        <DeleteConfirmDialog
+          snippet={deletingSnippet}
+          onClose={closeDeleteDialog}
+        />
+      )}
     </div>
   )
 }
