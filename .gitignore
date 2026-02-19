@@ -1,5 +1,9 @@
 node_modules/
 .claude/
+
+# Local data and reference files — kept local only
+Data/
+Example/
 dist/
 build/
 .env

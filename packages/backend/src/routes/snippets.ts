@@ -49,6 +49,18 @@ snippetsRouter.get('/', async (req: Request, res: Response, next: NextFunction) 
   }
 });
 
+// GET /api/v1/snippets/shortcuts — all active shortcuts for the org (used by extension)
+snippetsRouter.get('/shortcuts', async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const shortcuts = await prisma.snippet.findMany({
+      where: { organizationId: req.user!.organizationId, shortcut: { not: null }, isActive: true },
+      select: { shortcut: true, name: true },
+      orderBy: { shortcut: 'asc' },
+    });
+    res.json(shortcuts);
+  } catch (err) { next(err); }
+});
+
 // GET /api/v1/snippets/shortcut/:shortcut — used by the browser extension
 snippetsRouter.get('/shortcut/:shortcut', async (req: Request<ShortcutParam>, res: Response, next: NextFunction) => {
   try {

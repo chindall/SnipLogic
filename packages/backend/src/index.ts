@@ -13,9 +13,22 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    const allowed = process.env.FRONTEND_URL || 'http://localhost:5173';
+    if (origin === allowed || origin === 'http://localhost:5173' || origin.startsWith('chrome-extension://') || origin.startsWith('moz-extension://'))
+      return callback(null, true);
+    callback(new Error(`CORS blocked: ${origin}`));
+  },
   credentials: true,
 }));
+
+// Chrome 94+ Private Network Access: extension pages fetching localhost must receive this header
+app.use((_req, res, next) => {
+  res.setHeader('Access-Control-Allow-Private-Network', 'true');
+  next();
+});
+
 app.use(express.json());
 
 // Health check
