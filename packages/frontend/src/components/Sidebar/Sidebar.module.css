@@ -134,6 +134,81 @@
   flex-shrink: 0;
   min-width: 24px;
   text-align: center;
+  transition: opacity var(--transition-fast);
+}
+
+/* Hide count badge and show action buttons on hover */
+.folderItem:hover .countBadge {
+  display: none;
+}
+
+.folderActions {
+  display: none;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.folderItem:hover .folderActions {
+  display: flex;
+}
+
+.folderActionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--color-sidebar-text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  padding: 0;
+}
+
+.folderActionBtn:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--color-sidebar-text-bright);
+}
+
+.folderActionBtnDanger:hover {
+  background: rgba(220, 38, 38, 0.25);
+  color: #fca5a5;
+}
+
+/* ── Folders section header (label + add button) ──────────────── */
+.foldersSectionHeader {
+  display: flex;
+  align-items: center;
+  padding: var(--space-5) var(--space-5) var(--space-2);
+}
+
+.foldersSectionHeader .sectionLabel {
+  padding: 0;
+  flex: 1;
+}
+
+.addFolderBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--color-sidebar-text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.addFolderBtn:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--color-sidebar-text-bright);
 }
 
 .emptyFolders {

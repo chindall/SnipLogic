@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { prisma } from '../lib/prisma';
 import { requireAuth } from '../middleware/auth';
 import { AppError } from '../middleware/errorHandler';
+import { canWriteWorkspace, getWorkspaceIdForFolder } from '../lib/permissions';
 
 export const snippetsRouter = Router();
 snippetsRouter.use(requireAuth);
@@ -70,6 +71,15 @@ snippetsRouter.post('/', async (req: Request, res: Response, next: NextFunction)
   try {
     const folderId: string = req.body.folderId;
     if (!folderId) throw new AppError(400, 'folderId is required');
+
+    const { userId, isGlobalAdmin } = req.user!;
+    if (!isGlobalAdmin) {
+      const workspaceId = await getWorkspaceIdForFolder(folderId);
+      if (!workspaceId || !await canWriteWorkspace(userId, workspaceId)) {
+        throw new AppError(403, 'You do not have permission to create snippets in this folder');
+      }
+    }
+
     const data = SnippetSchema.parse(req.body);
     const snippet = await prisma.snippet.create({
       data: { ...data, folderId, organizationId: req.user!.organizationId },
@@ -83,6 +93,17 @@ snippetsRouter.post('/', async (req: Request, res: Response, next: NextFunction)
 // PATCH /api/v1/snippets/:id
 snippetsRouter.patch('/:id', async (req: Request<IdParam>, res: Response, next: NextFunction) => {
   try {
+    const { userId, isGlobalAdmin } = req.user!;
+    if (!isGlobalAdmin) {
+      const existing = await prisma.snippet.findUnique({
+        where: { id: req.params.id },
+        select: { folder: { select: { workspaceId: true } } },
+      });
+      if (!existing) throw new AppError(404, 'Snippet not found');
+      if (!await canWriteWorkspace(userId, existing.folder.workspaceId)) {
+        throw new AppError(403, 'You do not have permission to edit snippets in this folder');
+      }
+    }
     const data = SnippetSchema.partial().parse(req.body);
     const snippet = await prisma.snippet.update({ where: { id: req.params.id }, data });
     res.json(snippet);
@@ -94,6 +115,17 @@ snippetsRouter.patch('/:id', async (req: Request<IdParam>, res: Response, next: 
 // DELETE /api/v1/snippets/:id
 snippetsRouter.delete('/:id', async (req: Request<IdParam>, res: Response, next: NextFunction) => {
   try {
+    const { userId, isGlobalAdmin } = req.user!;
+    if (!isGlobalAdmin) {
+      const existing = await prisma.snippet.findUnique({
+        where: { id: req.params.id },
+        select: { folder: { select: { workspaceId: true } } },
+      });
+      if (!existing) throw new AppError(404, 'Snippet not found');
+      if (!await canWriteWorkspace(userId, existing.folder.workspaceId)) {
+        throw new AppError(403, 'You do not have permission to delete snippets in this folder');
+      }
+    }
     await prisma.snippet.delete({ where: { id: req.params.id } });
     res.status(204).send();
   } catch (err) {

@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import ImportPage from './pages/ImportPage'
+import UsersPage from './pages/UsersPage'
 import { useAuthStore } from './store/authStore'
 
 const queryClient = new QueryClient()
@@ -32,6 +33,14 @@ export default function App() {
             element={
               <PrivateRoute>
                 <ImportPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/users"
+            element={
+              <PrivateRoute>
+                <UsersPage />
               </PrivateRoute>
             }
           />

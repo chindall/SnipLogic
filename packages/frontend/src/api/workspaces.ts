@@ -7,6 +7,7 @@ export interface Workspace {
   isPersonal: boolean
   organizationId: string
   ownerId: string | null
+  canWrite: boolean
   _count: { folders: number }
 }
 

@@ -1,0 +1,228 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  height: var(--header-height);
+  border-bottom: var(--border-width) solid var(--color-content-border);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: var(--border-width) solid var(--color-content-border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.backBtn:hover {
+  background: var(--color-content-subtle);
+  color: var(--color-text-primary);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.inviteBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 34px;
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.inviteBtn:hover { background: var(--color-accent-hover); }
+
+/* ── User list ── */
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ── User card ── */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--color-content-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-content-bg);
+  transition: box-shadow var(--transition-fast);
+}
+.card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.adminBadge {
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  background: #ede9fe;
+  color: #5b21b6;
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+}
+
+.email {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: 2px;
+}
+
+.rolePill {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.role_WORKSPACE_ADMIN {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.role_EDITOR {
+  background: var(--color-accent-light);
+  color: var(--color-accent-text);
+}
+
+.role_VIEWER {
+  background: var(--color-content-subtle);
+  color: var(--color-text-secondary);
+  border: var(--border-width) solid var(--color-content-border);
+}
+
+.noRoles {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.manageBtn {
+  height: 32px;
+  padding: 0 var(--space-3);
+  border: var(--border-width) solid var(--color-content-border);
+  border-radius: var(--radius-md);
+  background: var(--color-content-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+.manageBtn:hover {
+  background: var(--color-content-subtle);
+  border-color: var(--color-accent-muted);
+  color: var(--color-accent-text);
+}
+
+/* ── Skeleton ── */
+.skeletonCard {
+  height: 80px;
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-content-border);
+  background: linear-gradient(
+    90deg,
+    var(--color-content-subtle) 25%,
+    var(--color-content-hover) 37%,
+    var(--color-content-subtle) 63%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
