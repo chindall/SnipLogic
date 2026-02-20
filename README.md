@@ -136,7 +136,7 @@ SnipLogic runs entirely in Docker. No cloud accounts, no subscriptions.
 - Linux host with Docker + Docker Compose installed
 - A reverse proxy (Nginx Proxy Manager, Traefik, Caddy, etc.) for SSL — or access via local IP
 
-### Deploy in 4 steps
+### Deploy in 5 steps
 
 ```bash
 # 1. Clone the repo
@@ -154,9 +154,16 @@ docker compose up -d --build
 # 4. Verify
 docker compose ps
 docker compose logs backend --tail 20
+
+# 5. Open the setup wizard
+# Navigate to http://<your-host-ip>:5173
+# You'll be redirected to /setup automatically on a fresh install
+# Enter your organization name and create your admin account — done!
 ```
 
 Your instance will be available at `http://<your-host-ip>:5173`.
+
+> **Fresh install detection:** SnipLogic automatically detects whether an admin account exists. On a brand-new deployment the `/setup` wizard appears first — no manual database commands needed. Once the first account is created the wizard is permanently disabled.
 
 ### Recommended: Nginx Proxy Manager + Let's Encrypt
 
@@ -235,6 +242,7 @@ Organization
 - [x] Settings hub (Account, Variables, Team, Workspaces)
 - [x] TextBlaze JSON import
 - [x] Production Docker setup (self-hosted)
+- [x] First-run setup wizard (auto-detected, no CLI needed)
 - [ ] Desktop app — Electron tray app for Windows + macOS (snippet picker outside the browser)
 - [ ] Configurable trigger prefix (e.g. `;;`, `:` instead of `//`)
 - [ ] Firefox extension
