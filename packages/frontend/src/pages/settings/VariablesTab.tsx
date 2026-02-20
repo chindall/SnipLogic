@@ -124,7 +124,7 @@ export default function VariablesTab() {
               {!isLoading && userVars.length === 0 && (
                 <div className={styles.empty}>
                   <p>No personal variables yet.</p>
-                  <p className={styles.emptyHint}>Add one to use in your snippets — e.g. <code className={styles.inlineCode}>{'{{firstname}}'}</code> → Craig</p>
+                  <p className={styles.emptyHint}>Add one to use in your snippets — e.g. <code className={styles.inlineCode}>{'{{firstname}}'}</code> → Barry</p>
                 </div>
               )}
               {userVars.map((v) => (
