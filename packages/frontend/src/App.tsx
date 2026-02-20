@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import ImportPage from './pages/ImportPage'
-import UsersPage from './pages/UsersPage'
 import SettingsPage from './pages/SettingsPage'
 import { useAuthStore } from './store/authStore'
 
@@ -37,14 +36,7 @@ export default function App() {
               </PrivateRoute>
             }
           />
-          <Route
-            path="/users"
-            element={
-              <PrivateRoute>
-                <UsersPage />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/users" element={<Navigate to="/settings" replace />} />
           <Route
             path="/settings"
             element={

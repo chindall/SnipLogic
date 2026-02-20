@@ -99,6 +99,45 @@ authRouter.get('/me', requireAuth, async (req: Request, res: Response, next: Nex
   }
 });
 
+// ─── Update own profile (name + optional password change) ────────────────────
+
+const UpdateMeSchema = z.object({
+  firstName: z.string().min(1).optional(),
+  lastName: z.string().min(1).optional(),
+  currentPassword: z.string().optional(),
+  newPassword: z.string().min(8).optional(),
+}).refine(
+  (d) => !(d.newPassword && !d.currentPassword),
+  { message: 'currentPassword is required to set a new password' }
+);
+
+authRouter.patch('/me', requireAuth, async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const data = UpdateMeSchema.parse(req.body);
+    const user = await prisma.user.findUniqueOrThrow({ where: { id: req.user!.userId } });
+
+    let passwordHash: string | undefined;
+    if (data.newPassword) {
+      const valid = await bcrypt.compare(data.currentPassword!, user.passwordHash);
+      if (!valid) throw new AppError(400, 'Current password is incorrect');
+      passwordHash = await bcrypt.hash(data.newPassword, 12);
+    }
+
+    const updated = await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        ...(data.firstName ? { firstName: data.firstName } : {}),
+        ...(data.lastName  ? { lastName:  data.lastName  } : {}),
+        ...(passwordHash   ? { passwordHash }               : {}),
+      },
+    });
+
+    res.json(sanitizeUser(updated));
+  } catch (err) {
+    next(err);
+  }
+});
+
 // Strip the password hash before sending user data to the client
 function sanitizeUser(user: { id: string; email: string; passwordHash: string; firstName: string; lastName: string; isGlobalAdmin: boolean; createdAt: Date; updatedAt: Date; organizationId: string }) {
   const { passwordHash: _omit, ...safe } = user;

@@ -37,6 +37,12 @@ export const usersApi = {
 
   removeRole: (userId: string, workspaceId: string) =>
     api.delete<OrgUser>(`/users/${userId}/workspace-roles/${workspaceId}`).then((r) => r.data),
+
+  resetPassword: (userId: string, newPassword: string) =>
+    api.post(`/users/${userId}/reset-password`, { newPassword }).then((r) => r.data),
+
+  personalWorkspaceExportUrl: (userId: string) =>
+    `/api/v1/users/${userId}/personal-workspace/export`,
 }
 
 export function useUsers() {
@@ -76,5 +82,12 @@ export function useRemoveRole() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['users'] })
     },
+  })
+}
+
+export function useResetPassword() {
+  return useMutation({
+    mutationFn: ({ userId, newPassword }: { userId: string; newPassword: string }) =>
+      usersApi.resetPassword(userId, newPassword),
   })
 }

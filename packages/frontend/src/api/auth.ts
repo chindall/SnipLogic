@@ -1,3 +1,4 @@
+import { useMutation } from '@tanstack/react-query'
 import { api } from './client'
 
 export interface User {
@@ -28,4 +29,14 @@ export const authApi = {
   }) => api.post<AuthResponse>('/auth/register', data).then((r) => r.data),
 
   me: () => api.get<User>('/auth/me').then((r) => r.data),
+
+  updateMe: (data: { firstName?: string; lastName?: string; currentPassword?: string; newPassword?: string }) =>
+    api.patch<User>('/auth/me', data).then((r) => r.data),
+}
+
+export function useUpdateMe() {
+  return useMutation({
+    mutationFn: (data: { firstName?: string; lastName?: string; currentPassword?: string; newPassword?: string }) =>
+      authApi.updateMe(data),
+  })
 }
