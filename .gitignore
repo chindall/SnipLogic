@@ -22,3 +22,4 @@ packages/frontend/dist/
 
 # Extension build
 packages/extension/dist/
+project-scope.txt
