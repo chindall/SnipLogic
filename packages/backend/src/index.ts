@@ -7,6 +7,7 @@ import { foldersRouter } from './routes/folders';
 import { snippetsRouter } from './routes/snippets';
 import { usersRouter } from './routes/users';
 import { importRouter } from './routes/import';
+import { variablesRouter } from './routes/variables';
 import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
@@ -43,6 +44,7 @@ app.use('/api/v1/folders', foldersRouter);
 app.use('/api/v1/snippets', snippetsRouter);
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/import', importRouter);
+app.use('/api/v1/variables', variablesRouter);
 
 // Must be last — catches all errors thrown in route handlers
 app.use(errorHandler);

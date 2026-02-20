@@ -10,7 +10,8 @@ snippetsRouter.use(requireAuth);
 
 const SnippetSchema = z.object({
   name: z.string().min(1),
-  shortcut: z.string().optional().nullable(),
+  // Strip extra leading slash — users naturally type "//sig" but DB stores "/sig"
+  shortcut: z.string().transform((s) => s.startsWith('//') ? s.slice(1) : s).optional().nullable(),
   content: z.string().min(1),
   htmlContent: z.string().optional().nullable(),
   isActive: z.boolean().optional(),
