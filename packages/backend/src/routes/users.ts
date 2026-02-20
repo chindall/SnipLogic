@@ -111,3 +111,78 @@ usersRouter.delete('/:id/workspace-roles/:workspaceId', requireGlobalAdmin, asyn
     next(err);
   }
 });
+
+// POST /api/v1/users/:id/reset-password — admin sets a temp password for another user
+const ResetPasswordSchema = z.object({
+  newPassword: z.string().min(8),
+});
+
+usersRouter.post('/:id/reset-password', requireGlobalAdmin, async (req: Request<UserIdParam>, res: Response, next: NextFunction) => {
+  try {
+    const { newPassword } = ResetPasswordSchema.parse(req.body);
+
+    const target = await prisma.user.findUnique({ where: { id: req.params.id } });
+    if (!target || target.organizationId !== req.user!.organizationId) {
+      throw new AppError(404, 'User not found');
+    }
+    if (target.id === req.user!.userId) {
+      throw new AppError(400, 'Use the account settings to change your own password');
+    }
+
+    const passwordHash = await bcrypt.hash(newPassword, 12);
+    await prisma.user.update({ where: { id: req.params.id }, data: { passwordHash } });
+
+    res.json({ success: true });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// GET /api/v1/users/:id/personal-workspace/export — export a user's personal workspace as JSON
+usersRouter.get('/:id/personal-workspace/export', requireGlobalAdmin, async (req: Request<UserIdParam>, res: Response, next: NextFunction) => {
+  try {
+    const target = await prisma.user.findUnique({
+      where: { id: req.params.id },
+      select: { id: true, firstName: true, lastName: true, email: true, organizationId: true },
+    });
+    if (!target || target.organizationId !== req.user!.organizationId) {
+      throw new AppError(404, 'User not found');
+    }
+
+    const workspace = await prisma.workspace.findFirst({
+      where: { ownerId: target.id, isPersonal: true },
+      include: {
+        folders: {
+          include: {
+            snippets: {
+              select: { name: true, shortcut: true, content: true, htmlContent: true, isActive: true, sortOrder: true },
+            },
+          },
+          orderBy: { sortOrder: 'asc' },
+        },
+      },
+    });
+
+    if (!workspace) throw new AppError(404, 'Personal workspace not found');
+
+    const exportData = {
+      exportedAt: new Date().toISOString(),
+      user: { id: target.id, firstName: target.firstName, lastName: target.lastName, email: target.email },
+      workspace: {
+        name: workspace.name,
+        folders: workspace.folders.map((f) => ({
+          name: f.name,
+          description: f.description,
+          sortOrder: f.sortOrder,
+          snippets: f.snippets,
+        })),
+      },
+    };
+
+    res.setHeader('Content-Disposition', `attachment; filename="personal-workspace-${target.email}.json"`);
+    res.setHeader('Content-Type', 'application/json');
+    res.json(exportData);
+  } catch (err) {
+    next(err);
+  }
+});
