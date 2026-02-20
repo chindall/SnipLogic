@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import ImportPage from './pages/ImportPage'
 import UsersPage from './pages/UsersPage'
+import SettingsPage from './pages/SettingsPage'
 import { useAuthStore } from './store/authStore'
 
 const queryClient = new QueryClient()
@@ -41,6 +42,14 @@ export default function App() {
             element={
               <PrivateRoute>
                 <UsersPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <PrivateRoute>
+                <SettingsPage />
               </PrivateRoute>
             }
           />

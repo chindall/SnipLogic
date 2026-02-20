@@ -26,7 +26,7 @@
       "run_at": "document_idle"
     }
   ],
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "tabs", "clipboardRead"],
   "host_permissions": [
     "https://sniplogic.yourdomain.com/*",
     "http://localhost:3001/*"

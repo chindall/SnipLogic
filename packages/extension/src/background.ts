@@ -7,6 +7,8 @@
  *   apiUrl: string  (default: https://sniplogic.yourdomain.com)
  *   shortcuts: string[]  (list of shortcut strings, e.g. ["/noteadreceipt", ...])
  *   shortcutsLastFetched: number  (timestamp ms)
+ *   variables: Array<{ name: string; value: string; scope: 'USER' | 'WORKSPACE'; workspaceId?: string | null }>
+ *   variablesLastFetched: number  (timestamp ms)
  */
 
 export {};
@@ -14,18 +16,27 @@ export {};
 const DEFAULT_API_URL = 'https://sniplogic.yourdomain.com';
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
+interface CachedVariable {
+  name: string;
+  value: string;
+  scope: 'USER' | 'WORKSPACE';
+  workspaceId?: string | null;
+}
+
 interface StorageData {
   token?: string;
   user?: { email: string };
   apiUrl?: string;
   shortcuts?: string[];
   shortcutsLastFetched?: number;
+  variables?: CachedVariable[];
+  variablesLastFetched?: number;
 }
 
 async function getStorage(): Promise<StorageData> {
   return new Promise((resolve) => {
     chrome.storage.local.get(
-      ['token', 'user', 'apiUrl', 'shortcuts', 'shortcutsLastFetched'],
+      ['token', 'user', 'apiUrl', 'shortcuts', 'shortcutsLastFetched', 'variables', 'variablesLastFetched'],
       (result) => resolve(result as StorageData)
     );
   });
@@ -39,8 +50,46 @@ async function setStorage(data: Partial<StorageData>): Promise<void> {
 
 async function clearAuth(): Promise<void> {
   return new Promise((resolve) => {
-    chrome.storage.local.remove(['token', 'user', 'shortcuts', 'shortcutsLastFetched'], resolve);
+    chrome.storage.local.remove(
+      ['token', 'user', 'shortcuts', 'shortcutsLastFetched', 'variables', 'variablesLastFetched'],
+      resolve
+    );
   });
+}
+
+async function fetchAndCacheVariables(token: string, apiUrl: string): Promise<CachedVariable[]> {
+  const base = apiUrl || DEFAULT_API_URL;
+  try {
+    const resp = await fetch(`${base}/api/v1/variables`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (resp.status === 401) {
+      await clearAuth();
+      return [];
+    }
+
+    if (!resp.ok) return [];
+
+    const data = (await resp.json()) as Array<{
+      name: string;
+      value: string;
+      scope: 'USER' | 'WORKSPACE';
+      workspaceId?: string | null;
+    }>;
+
+    const variables: CachedVariable[] = data.map((v) => ({
+      name: v.name,
+      value: v.value,
+      scope: v.scope,
+      workspaceId: v.workspaceId,
+    }));
+
+    await setStorage({ variables, variablesLastFetched: Date.now() });
+    return variables;
+  } catch {
+    return [];
+  }
 }
 
 async function fetchShortcuts(token: string, apiUrl: string): Promise<string[]> {

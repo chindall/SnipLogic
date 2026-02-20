@@ -20,17 +20,27 @@ function el<T extends HTMLElement>(id: string): T {
 
 // ── Storage ──────────────────────────────────────────────────────────────────
 
+interface CachedVariable {
+  name: string;
+  value: string;
+  scope: 'USER' | 'WORKSPACE';
+  workspaceId?: string | null;
+}
+
 interface StorageData {
   token?: string;
   user?: { email: string };
   apiUrl?: string;
   shortcuts?: string[];
+  shortcutsLastFetched?: number;
+  variables?: CachedVariable[];
 }
 
 function getStorage(): Promise<StorageData> {
   return new Promise((resolve) => {
-    chrome.storage.local.get(['token', 'user', 'apiUrl', 'shortcuts'], (r) =>
-      resolve(r as StorageData)
+    chrome.storage.local.get(
+      ['token', 'user', 'apiUrl', 'shortcuts', 'shortcutsLastFetched', 'variables'],
+      (r) => resolve(r as StorageData)
     );
   });
 }
@@ -41,7 +51,10 @@ function setStorage(data: Partial<StorageData>): Promise<void> {
 
 function clearStorage(): Promise<void> {
   return new Promise((resolve) =>
-    chrome.storage.local.remove(['token', 'user', 'shortcuts', 'shortcutsLastFetched'], resolve)
+    chrome.storage.local.remove(
+      ['token', 'user', 'shortcuts', 'shortcutsLastFetched', 'variables', 'variablesLastFetched'],
+      resolve
+    )
   );
 }
 
@@ -52,11 +65,26 @@ function showLogin(): void {
   el('view-loggedin').style.display = 'none';
 }
 
-function showLoggedIn(email: string, shortcutCount: number): void {
+function showLoggedIn(email: string, shortcutCount: number, syncTs?: number): void {
   el('view-login').style.display = 'none';
   el('view-loggedin').style.display = '';
   el('user-email').textContent = email;
   el('shortcut-count').textContent = `${shortcutCount} shortcut${shortcutCount !== 1 ? 's' : ''} loaded`;
+  setSyncTime(syncTs);
+}
+
+function formatSyncTime(ts: number): string {
+  const d = new Date(ts);
+  const now = new Date();
+  const isToday = d.toDateString() === now.toDateString();
+  const time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  if (isToday) return `Last synced at ${time}`;
+  const date = d.toLocaleDateString([], { month: 'short', day: 'numeric' });
+  return `Last synced ${date} at ${time}`;
+}
+
+function setSyncTime(ts?: number): void {
+  el('last-synced').textContent = ts ? formatSyncTime(ts) : '';
 }
 
 function showError(msg: string): void {
@@ -67,6 +95,21 @@ function showError(msg: string): void {
 
 function hideError(): void {
   el('login-error').style.display = 'none';
+}
+
+// ── Variable fetching ─────────────────────────────────────────────────────────
+
+async function fetchAndCacheVariables(token: string, apiUrl: string): Promise<void> {
+  try {
+    const resp = await fetch(`${apiUrl}/api/v1/variables`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!resp.ok) return;
+    const data = (await resp.json()) as CachedVariable[];
+    await setStorage({ variables: data } as never);
+  } catch {
+    // Non-fatal — variables will just be unavailable offline
+  }
 }
 
 // ── Shortcut fetching ────────────────────────────────────────────────────────
@@ -138,11 +181,12 @@ async function handleLogin(): Promise<void> {
 
     await setStorage({ token: body.token, user: body.user });
 
-    // Warm the shortcut cache
+    // Warm the shortcut + variable cache
     const shortcuts = await fetchAndCacheShortcuts(body.token, apiUrl);
+    await fetchAndCacheVariables(body.token, apiUrl);
     await broadcastShortcuts(shortcuts);
 
-    showLoggedIn(body.user.email, shortcuts.length);
+    showLoggedIn(body.user.email, shortcuts.length, Date.now());
   } catch (err) {
     showError('Could not reach the SnipLogic server. Check API URL in settings.');
     console.error('[SnipLogic popup] login error:', err);
@@ -165,9 +209,11 @@ async function handleRefresh(): Promise<void> {
 
     const apiUrl = storage.apiUrl || DEFAULT_API_URL;
     const shortcuts = await fetchAndCacheShortcuts(storage.token, apiUrl);
+    await fetchAndCacheVariables(storage.token, apiUrl);
     await broadcastShortcuts(shortcuts);
 
     el('shortcut-count').textContent = `${shortcuts.length} shortcut${shortcuts.length !== 1 ? 's' : ''} loaded`;
+    setSyncTime(Date.now());
   } catch (err) {
     console.error('[SnipLogic popup] refresh error:', err);
   } finally {
@@ -204,7 +250,23 @@ async function init(): Promise<void> {
 
   if (storage.token && storage.user) {
     const count = storage.shortcuts?.length ?? 0;
-    showLoggedIn(storage.user.email, count);
+    showLoggedIn(storage.user.email, count, storage.shortcutsLastFetched);
+
+    // Silently refresh shortcuts + variables in the background every time the
+    // popup opens — this ensures changes made in the web UI are picked up
+    // without the user having to manually click "Refresh Shortcuts".
+    const apiUrl = storage.apiUrl || DEFAULT_API_URL;
+    fetchAndCacheShortcuts(storage.token, apiUrl)
+      .then((shortcuts) => {
+        const now = Date.now();
+        el('shortcut-count').textContent =
+          `${shortcuts.length} shortcut${shortcuts.length !== 1 ? 's' : ''} loaded`;
+        setSyncTime(now);
+        return broadcastShortcuts(shortcuts);
+      })
+      .catch(() => { /* non-fatal — popup still usable */ });
+    fetchAndCacheVariables(storage.token, apiUrl)
+      .catch(() => { /* non-fatal */ });
   } else {
     showLogin();
   }
