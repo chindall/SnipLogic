@@ -245,7 +245,11 @@ Organization
 
 I needed a self-hosted alternative to TextBlaze for my team — something we could own completely, extend freely, and run on our own infrastructure. This project grew from that need into a full-featured platform I'm genuinely proud of.
 
-*Built with a lot of coffee and a lot of help from Claude Code. 🤖*
+I want to be transparent: I came into this project as someone new to TypeScript, React, Node.js, Docker, and browser extension development. What you see here was built by pairing with **Claude Code (AI)** as a learning accelerator — not just to generate code, but to understand *why* every decision was made along the way. Every architecture choice, every bug fix, every design pattern was a learning moment.
+
+I believe this is what the future of software development looks like — humans bringing the vision, domain knowledge, and judgement; AI helping compress years of learning into weeks. This project is proof that works.
+
+*Built with a lot of coffee, a lot of curiosity, and Claude Code by my side. 🤖*
 
 ---
 
