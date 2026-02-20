@@ -138,6 +138,30 @@ usersRouter.post('/:id/reset-password', requireGlobalAdmin, async (req: Request<
   }
 });
 
+// PATCH /api/v1/users/:id/admin-status — grant or revoke global admin (admin only, cannot modify self)
+usersRouter.patch('/:id/admin-status', requireGlobalAdmin, async (req: Request<UserIdParam>, res: Response, next: NextFunction) => {
+  try {
+    const { isGlobalAdmin } = z.object({ isGlobalAdmin: z.boolean() }).parse(req.body);
+
+    const target = await prisma.user.findUnique({ where: { id: req.params.id } });
+    if (!target || target.organizationId !== req.user!.organizationId) {
+      throw new AppError(404, 'User not found');
+    }
+    if (target.id === req.user!.userId) {
+      throw new AppError(400, 'Cannot modify your own admin status');
+    }
+
+    const updated = await prisma.user.update({
+      where: { id: req.params.id },
+      data: { isGlobalAdmin },
+      select: userSelect,
+    });
+    res.json(updated);
+  } catch (err) {
+    next(err);
+  }
+});
+
 // GET /api/v1/users/:id/personal-workspace/export — export a user's personal workspace as JSON
 usersRouter.get('/:id/personal-workspace/export', requireGlobalAdmin, async (req: Request<UserIdParam>, res: Response, next: NextFunction) => {
   try {

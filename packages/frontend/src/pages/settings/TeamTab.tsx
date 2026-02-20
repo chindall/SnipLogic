@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useUsers, useResetPassword, usersApi, type OrgUser, type RoleType } from '../../api/users'
+import { useUsers, useResetPassword, useSetAdminStatus, usersApi, type OrgUser, type RoleType } from '../../api/users'
 import { useAuthStore } from '../../store/authStore'
 import InviteUserModal from '../InviteUserModal'
 import AssignRoleModal from '../AssignRoleModal'
@@ -95,11 +95,13 @@ function UserCard({
   isSelf,
   onManageRoles,
   onResetPassword,
+  onToggleAdmin,
 }: {
   user: OrgUser
   isSelf: boolean
   onManageRoles: (u: OrgUser) => void
   onResetPassword: (u: OrgUser) => void
+  onToggleAdmin: (u: OrgUser) => void
 }) {
   const initials = `${user.firstName[0]}${user.lastName[0]}`.toUpperCase()
   const sharedRoles = user.workspaceRoles
@@ -140,6 +142,9 @@ function UserCard({
         </button>
         {!isSelf && (
           <>
+            <button className={styles.actionBtn} onClick={() => onToggleAdmin(user)} title={user.isGlobalAdmin ? 'Remove admin' : 'Make admin'}>
+              {user.isGlobalAdmin ? 'Remove Admin' : 'Make Admin'}
+            </button>
             <button className={styles.actionBtn} onClick={() => onResetPassword(user)} title="Reset password">
               Reset Password
             </button>
@@ -159,6 +164,11 @@ export default function TeamTab() {
   const [showInvite, setShowInvite] = useState(false)
   const [managingUser, setManagingUser] = useState<OrgUser | null>(null)
   const [resettingUser, setResettingUser] = useState<OrgUser | null>(null)
+  const setAdminStatus = useSetAdminStatus()
+
+  async function handleToggleAdmin(u: OrgUser) {
+    await setAdminStatus.mutateAsync({ userId: u.id, isGlobalAdmin: !u.isGlobalAdmin })
+  }
 
   return (
     <div className={styles.team}>
@@ -188,6 +198,7 @@ export default function TeamTab() {
             isSelf={u.id === currentUser?.id}
             onManageRoles={setManagingUser}
             onResetPassword={setResettingUser}
+            onToggleAdmin={handleToggleAdmin}
           />
         ))}
       </div>

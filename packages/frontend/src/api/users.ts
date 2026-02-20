@@ -41,6 +41,9 @@ export const usersApi = {
   resetPassword: (userId: string, newPassword: string) =>
     api.post(`/users/${userId}/reset-password`, { newPassword }).then((r) => r.data),
 
+  setAdminStatus: (userId: string, isGlobalAdmin: boolean) =>
+    api.patch<OrgUser>(`/users/${userId}/admin-status`, { isGlobalAdmin }).then((r) => r.data),
+
   personalWorkspaceExportUrl: (userId: string) =>
     `/api/v1/users/${userId}/personal-workspace/export`,
 }
@@ -89,5 +92,16 @@ export function useResetPassword() {
   return useMutation({
     mutationFn: ({ userId, newPassword }: { userId: string; newPassword: string }) =>
       usersApi.resetPassword(userId, newPassword),
+  })
+}
+
+export function useSetAdminStatus() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: ({ userId, isGlobalAdmin }: { userId: string; isGlobalAdmin: boolean }) =>
+      usersApi.setAdminStatus(userId, isGlobalAdmin),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['users'] })
+    },
   })
 }
