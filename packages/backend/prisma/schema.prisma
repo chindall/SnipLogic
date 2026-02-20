@@ -168,7 +168,7 @@ enum VariableScope {
 model Variable {
   id             String        @id @default(cuid())
   name           String        // e.g. "firstname" (no braces, lowercase)
-  value          String        // e.g. "Craig"
+  value          String        // e.g. "Barry"
   scope          VariableScope
   userId         String?       // non-null when scope = USER
   workspaceId    String?       // non-null when scope = WORKSPACE

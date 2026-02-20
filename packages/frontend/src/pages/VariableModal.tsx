@@ -119,7 +119,7 @@ export default function VariableModal({ variable, defaultScope = 'USER', onClose
               className={styles.textarea}
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              placeholder="Craig"
+              placeholder="Barry"
               rows={3}
               disabled={isPending}
             />

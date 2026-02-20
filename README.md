@@ -49,7 +49,7 @@ Embed dynamic values directly in your snippets:
 
 | Token | Output |
 |---|---|
-| `{{firstname}}` | Craig *(your custom variable)* |
+| `{{firstname}}` | Barry *(your custom variable)* |
 | `{{datelong}}` | Thursday, February 19, 2026 |
 | `{{dateshort}}` | 02/19/2026 |
 | `{{time}}` | 2:34 PM |

@@ -72,7 +72,7 @@ export default function SetupPage() {
                 className={styles.input}
                 value={orgName}
                 onChange={(e) => setOrgName(e.target.value)}
-                placeholder="e.g. Acme Law"
+                placeholder="e.g. Star Labs"
                 required
                 autoFocus
                 disabled={loading}
@@ -90,7 +90,7 @@ export default function SetupPage() {
                   className={styles.input}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  placeholder="Craig"
+                  placeholder="Barry"
                   required
                   disabled={loading}
                 />
@@ -101,7 +101,7 @@ export default function SetupPage() {
                   className={styles.input}
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  placeholder="Hindall"
+                  placeholder="Allen"
                   required
                   disabled={loading}
                 />
@@ -154,7 +154,7 @@ export default function SetupPage() {
         </form>
 
         <p className={styles.note}>
-          This setup page is only available on a fresh installation and disappears once your account is created.
+          This setup page is only available on a fresh installation and disappears once the first account is created.
         </p>
       </div>
     </div>
