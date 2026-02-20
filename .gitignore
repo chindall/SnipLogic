@@ -1,5 +1,6 @@
 node_modules/
 .claude/
+CLAUDE.md
 
 # Local data and reference files — kept local only
 Data/
