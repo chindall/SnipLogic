@@ -49,8 +49,8 @@ export default function AccountTab() {
       setConfirmPassword('')
       setPasswordMsg({ type: 'ok', text: 'Password changed. Sign out of the extension and sign back in.' })
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : ''
-      setPasswordMsg({ type: 'err', text: msg.includes('incorrect') ? 'Current password is incorrect.' : 'Failed to change password.' })
+      const serverMsg: string = (err as { response?: { data?: { error?: string } } })?.response?.data?.error ?? ''
+      setPasswordMsg({ type: 'err', text: serverMsg.includes('incorrect') ? 'Current password is incorrect.' : 'Failed to change password.' })
     }
   }
 
