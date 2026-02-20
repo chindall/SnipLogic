@@ -24,7 +24,7 @@ Type a shortcut, press Tab — your snippet expands instantly, anywhere in the b
 
 ## What is SnipLogic?
 
-SnipLogic is a **self-hosted TextBlaze alternative** — a full snippet management platform designed for professional teams. Write your snippets once, use them everywhere: Gmail, Clio, Outlook, Word Online, and any browser-based editor.
+SnipLogic is a **self-hosted TextBlaze alternative** — a full snippet management platform designed for one or small teams. Write your snippets once, use them everywhere: Gmail, Clio, Outlook, Word Online, and any browser-based editor.
 
 Built as a personal homelab project, SnipLogic is a complete multi-tenant SaaS application with a browser extension, a polished web UI, and a full REST API — all containerized and deployable to any Linux machine in minutes.
 
@@ -243,13 +243,13 @@ Organization
 
 ## Why I Built This
 
-I needed a self-hosted alternative to TextBlaze for my team — something we could own completely, extend freely, and run on our own infrastructure. This project grew from that need into a full-featured platform I'm genuinely proud of.
+I needed a self-hosted alternative to TextBlaze due to PI and restrictions on what software I can use in my environment — something I could own completely, extend freely, and run on my own infrastructure. This project grew from that need into a full-featured platform I'm genuinely proud of.
 
 I want to be transparent: I came into this project as someone new to TypeScript, React, Node.js, Docker, and browser extension development. What you see here was built by pairing with **Claude Code (AI)** as a learning accelerator — not just to generate code, but to understand *why* every decision was made along the way. Every architecture choice, every bug fix, every design pattern was a learning moment.
 
 I believe this is what the future of software development looks like — humans bringing the vision, domain knowledge, and judgement; AI helping compress years of learning into weeks. This project is proof that works.
 
-*Built with a lot of coffee, a lot of curiosity, and Claude Code by my side. 🤖*
+*Built with a lot of Dutch Brothers coffee, late nights I should be in bed, and lot of learning and determination, and Claude Code in my Terminal by my side. 🤖*
 
 ---
 
