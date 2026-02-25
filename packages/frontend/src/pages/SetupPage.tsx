@@ -4,7 +4,7 @@ import { authApi } from '../api/auth'
 import { useAuthStore } from '../store/authStore'
 import styles from './SetupPage.module.css'
 
-export default function SetupPage() {
+export default function SetupPage({ onComplete }: { onComplete?: () => void }) {
   const navigate = useNavigate()
   const setAuth = useAuthStore((s) => s.setAuth)
 
@@ -32,6 +32,7 @@ export default function SetupPage() {
         password,
       })
       setAuth(user, token)
+      onComplete?.()
       navigate('/')
     } catch (err: unknown) {
       const msg: string = (err as { response?: { data?: { error?: string } } })?.response?.data?.error ?? ''

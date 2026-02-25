@@ -69,7 +69,7 @@ function AppRoutes() {
   if (!configured) {
     return (
       <Routes>
-        <Route path="/setup" element={<SetupPage />} />
+        <Route path="/setup" element={<SetupPage onComplete={() => setConfigured(true)} />} />
         <Route path="*" element={<Navigate to="/setup" replace />} />
       </Routes>
     )
