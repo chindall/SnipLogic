@@ -146,7 +146,10 @@ cd SnipLogic
 # 2. Create your environment file
 cp .env.example .env
 # Edit .env — set JWT_SECRET and POSTGRES_PASSWORD
-# Generate a strong JWT_SECRET: openssl rand -base64 48
+# IMPORTANT: Use only alphanumeric passwords (no +, /, @, :, # characters)
+# Special characters break the database connection string.
+openssl rand -hex 48   # use this for JWT_SECRET
+openssl rand -hex 32   # use this for POSTGRES_PASSWORD
 
 # 3. Build and start
 docker compose up -d --build
