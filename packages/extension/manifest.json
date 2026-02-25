@@ -28,7 +28,7 @@
   ],
   "permissions": ["storage", "tabs", "clipboardRead"],
   "host_permissions": [
-    "https://sniplogic.yourdomain.com/*",
-    "http://localhost:3001/*"
+    "http://localhost:3001/*",
+    "https://*/*"
   ]
 }

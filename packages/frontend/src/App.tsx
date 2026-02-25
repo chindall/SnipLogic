@@ -18,14 +18,40 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
 
 function AppRoutes() {
   const [configured, setConfigured] = useState<boolean | null>(null)
+  const [error, setError] = useState(false)
 
-  useEffect(() => {
+  function checkStatus() {
+    setError(false)
+    setConfigured(null)
     setupApi.status()
       .then((data) => setConfigured(data.configured))
-      .catch(() => setConfigured(true)) // if the check fails, assume configured and let login handle it
-  }, [])
+      .catch(() => setError(true))
+  }
 
-  // Show nothing while we check — avoids any flash of wrong page
+  useEffect(() => { checkStatus() }, [])
+
+  // Backend unreachable — show retry UI instead of silently skipping setup
+  if (error) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9', gap: '1rem', fontFamily: 'Inter, sans-serif' }}>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+          <rect x="3"  y="3"  width="7" height="7" rx="1.5" fill="#3b82f6"/>
+          <rect x="14" y="3"  width="7" height="7" rx="1.5" fill="#3b82f6" opacity="0.6"/>
+          <rect x="3"  y="14" width="7" height="7" rx="1.5" fill="#3b82f6" opacity="0.6"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5" fill="#3b82f6" opacity="0.3"/>
+        </svg>
+        <p style={{ color: '#475569', fontSize: '0.95rem' }}>Unable to connect to the SnipLogic server.</p>
+        <button
+          onClick={checkStatus}
+          style={{ padding: '0.5rem 1.25rem', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '0.375rem', cursor: 'pointer', fontSize: '0.875rem' }}
+        >
+          Retry
+        </button>
+      </div>
+    )
+  }
+
+  // Show loading logo while we check — avoids any flash of wrong page
   if (configured === null) {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9' }}>

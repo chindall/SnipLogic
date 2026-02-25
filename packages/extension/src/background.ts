@@ -4,7 +4,7 @@
  * Storage schema:
  *   token: string | undefined
  *   user: { email: string } | undefined
- *   apiUrl: string  (default: https://sniplogic.yourdomain.com)
+ *   apiUrl: string  (default: http://localhost:3001)
  *   shortcuts: string[]  (list of shortcut strings, e.g. ["/noteadreceipt", ...])
  *   shortcutsLastFetched: number  (timestamp ms)
  *   variables: Array<{ name: string; value: string; scope: 'USER' | 'WORKSPACE'; workspaceId?: string | null }>
@@ -13,7 +13,7 @@
 
 export {};
 
-const DEFAULT_API_URL = 'https://sniplogic.yourdomain.com';
+const DEFAULT_API_URL = 'http://localhost:3001';
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
 interface CachedVariable {

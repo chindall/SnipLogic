@@ -53,6 +53,23 @@ authRouter.post('/register', async (req: Request, res: Response, next: NextFunct
       },
     });
 
+    // Create a shared org workspace and assign the admin as WORKSPACE_ADMIN
+    const orgWorkspace = await prisma.workspace.create({
+      data: {
+        name: data.organizationName,
+        isPersonal: false,
+        organizationId: org.id,
+      },
+    });
+
+    await prisma.workspaceRole.create({
+      data: {
+        userId: user.id,
+        workspaceId: orgWorkspace.id,
+        role: 'WORKSPACE_ADMIN',
+      },
+    });
+
     const token = signToken({ userId: user.id, organizationId: org.id, isGlobalAdmin: true });
     res.status(201).json({ token, user: sanitizeUser(user) });
   } catch (err) {

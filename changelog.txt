@@ -1,0 +1,78 @@
+SNIPLOGIC CHANGELOG
+====================
+
+All notable changes to this project are documented in this file.
+Most recent changes are at the top.
+
+────────────────────────────────────────────────────────────────
+
+2026-02-25  Fix setup wizard — IP access, shared workspace, error handling
+  - Fixed: setup status check no longer silently assumes "configured" on
+    network error — shows "Unable to connect" with a Retry button instead
+  - Fixed: first-time registration now creates a shared org workspace
+    (named after the organization) in addition to the personal workspace
+  - Added: changelog.txt to track changes
+
+2026-02-19  First-run setup wizard
+  - Added: GET /api/v1/setup/status — detects fresh install via user count
+  - Added: /setup page — wizard collects org name + admin credentials
+  - Added: AppRoutes checks setup status on load; redirects to /setup on
+    fresh install; blocks /setup once configured
+  - Updated: README deploy steps now reference the setup wizard
+
+2026-02-19  Updated placeholders
+  - Changed example variable name from "Craig" to "Barry" in README
+
+2026-02-19  Production Docker setup
+  - Added: packages/frontend/Dockerfile (multi-stage Node → nginx)
+  - Added: packages/frontend/nginx.conf (SPA routing + /api proxy)
+  - Rewrote: docker-compose.yml — frontend on port 5173, backend/postgres
+    internal only, all secrets via environment variables
+  - Added: .env.example
+
+2026-02-19  Fix password change error
+  - Fixed: AccountTab now reads err.response.data.error instead of
+    err.message — users see "Current password is incorrect" instead of
+    generic "Failed to change password"
+
+2026-02-19  Make Admin / Remove Admin toggle
+  - Added: PATCH /api/v1/users/:id/admin-status endpoint
+  - Added: Make Admin / Remove Admin button in Team tab
+  - Guard: cannot modify your own admin status
+
+2026-02-19  Settings restructure — 4-tab hub
+  - Rewrote: SettingsPage as tabbed shell (Account, Variables, Team, Workspaces)
+  - Added: AccountTab, VariablesTab, TeamTab, WorkspacesTab components
+  - Added: WorkspaceModal (create/rename), WorkspaceDeleteDialog
+  - Removed: standalone Team button from Sidebar
+  - Fixed: workspace click in Sidebar navigates to '/' if not already there
+
+2026-02-18  Variables feature + extension enhancements
+  - Added: Variables backend (GET/POST/PATCH/DELETE) — USER + WORKSPACE scope
+  - Added: Variables UI — personal + workspace tabs, dynamic vars reference
+  - Added: VariableModal for add/edit
+  - Extension: // trigger prefix (avoids conflict with site slash menus)
+  - Extension: variable substitution at expansion time (static + dynamic)
+  - Extension: auto-refresh shortcuts + variables on popup open
+  - Extension: last-synced timestamp in popup
+
+2026-02-17  Browser extension (MV3)
+  - Added: Chrome/Edge MV3 extension — //shortcut + Tab trigger
+  - Works in <input>, <textarea>, contenteditable (Gmail, Clio, Notion, etc.)
+  - Service worker: auth, API calls, shortcut + variable caching
+  - Content script: trigger detection, text replacement, cursor positioning
+  - Popup: login, status, manual refresh, API settings
+
+2026-02-16  Snippet/folder CRUD + user management
+  - Added: full snippet CRUD UI (create, edit, delete)
+  - Added: folder management (create, rename, delete)
+  - Added: user management — invite, assign roles, reset password
+  - Added: role-based access control (WORKSPACE_ADMIN / EDITOR / VIEWER)
+  - Added: TextBlaze JSON import (up to 25 files per request)
+
+2026-02-15  Initial commit — SnipLogic v0.1
+  - Express + TypeScript + Prisma backend
+  - React + TypeScript + Vite frontend
+  - PostgreSQL database with multi-tenant isolation
+  - JWT authentication + bcrypt password hashing
+  - Organization / User / Workspace / Folder / Snippet data model
